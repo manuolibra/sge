@@ -64,6 +64,7 @@
                             ?>
                                 <tr>
                                     <td>
+                                        <a class="btn btn-primary" data-toggle="modal" data-target="#ver<?php echo $fila['id']; ?>">Ver</a>
                                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editar<?php echo $fila['id']; ?>">
                                             <i class="fa fa-edit "></i>
                                         </button>
@@ -100,6 +101,8 @@
                                     <td><?php echo $fila['id_grado']; ?></td>
                                     <td><?php echo $fila['fecha']; ?></td>
                                 </tr>
+                                <?php include "ver_alumno.php"; ?>
+
                                 <?php include "editar_alumno.php"; ?>
                             <?php endwhile; ?>
                         </tbody>
