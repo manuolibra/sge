@@ -71,7 +71,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ver<?php echo $fila['id']; ?>" href="#">Ver</a></li>
                                                 <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editar<?php echo $fila['id']; ?>" href="#">Editar</a></li>
-                                                <li><a class="dropdown-item" href="../includes/eliminar_prof.php?id=<?php echo $fila['id'] ?>">Eliminar</a></li>
+                                                <li><a class="dropdown-item" href="../includes/eliminar_al.php?id=<?php echo $fila['id'] ?>">Eliminar</a></li>
                                             </ul>
                                         </div>
                                     </td>
