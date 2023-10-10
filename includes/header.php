@@ -126,23 +126,24 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
             <hr class="sidebar-divider">
 
             <!-- Heading -->
+            <?php if ($_SESSION["type"] == 1) { ?>
             <div class="sidebar-heading">
                 AJUSTES
             </div>
 
 
-            <?php if ($_SESSION["type"] == 1) { ?>
+            
                 <!-- Nav Item - Tables -->
                 <li class="nav-item">
                     <a class="nav-link" href="../views/usuarios.php">
                     <i class="bi bi-person-fill-lock"></i>
                         <span>Usuarios</span></a>
                 </li>
+            
+            <!-- Divider -->
+                <hr class="sidebar-divider d-none d-md-block">
             <?php }
             ?>
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>

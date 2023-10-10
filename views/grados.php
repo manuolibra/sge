@@ -10,10 +10,14 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Lista de Grados</h6>
-                <br>
-
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#grado">
+                
+                <?php if ($_SESSION["type"] != 3) { ?> <!-- Sólo el administrador -->
+                    <br>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#grado">
                     <span class="glyphicon glyphicon-plus"></span> Agregar <i class="fa fa-plus"></i> </a></button>
+                <?php }
+                ?> 
+
             </div>
             <?php include "form_grado.php"; ?>
 
@@ -43,11 +47,20 @@
                                     <td><?php echo $fila['fecha']; ?></td>
 
                                     <td>
-                                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editar<?php echo $fila['id']; ?>">
-                                            <i class="fa fa-edit "></i>
-                                        </button>
-                                        <a href="../includes/eliminar_grad.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">
-                                            <i class="fa fa-trash "></i></a>
+
+                                        <?php if ($_SESSION["type"] != 3) { ?> <!-- Sólo el administrador y editor -->
+                                        <div class="dropdown">
+                                            <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Acciones
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editar<?php echo $fila['id']; ?>" href="#">Editar</a></li>
+                                                <li><a class="dropdown-item" href="../includes/eliminar_grad.php?id=<?php echo $fila['id'] ?>">Eliminar</a></li>
+                                            </ul>
+                                        </div>
+                                        <?php }
+                                        ?>
+
                                     </td>
                                 </tr>
                                 <?php include "editar_grado.php"; ?>

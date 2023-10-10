@@ -9,11 +9,15 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Lista del Personal</h6>
-                <br>
-
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#prof">
+                <h6 class="m-0 font-weight-bold text-primary">Personal del Plantel</h6>
+                
+                <?php if ($_SESSION["type"] != 3) { ?>
+                    <br>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#prof">
                     <span class="glyphicon glyphicon-plus"></span> Agregar <i class="fa fa-plus"></i> </a></button>
+                <?php }
+                ?> 
+
             </div>
             <?php include "form_prof.php"; ?>
 
@@ -54,6 +58,8 @@
                                     <td><?php echo $fila['fecha']; ?></td>
 
                                     <td>
+
+                                        <?php if ($_SESSION["type"] != 3) { ?> <!-- Sólo el administrador y editor -->
                                         <div class="dropdown">
                                             <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Acciones
@@ -64,6 +70,14 @@
                                                 <li><a class="dropdown-item" href="../includes/eliminar_prof.php?id=<?php echo $fila['id'] ?>">Eliminar</a></li>
                                             </ul>
                                         </div>
+                                        <?php }
+                                        ?>
+
+                                        <?php if ($_SESSION["type"] == 3) { ?> <!-- Sólo el lector -->
+                                            <a class="btn btn-info" data-bs-toggle="modal" data-bs-target="#ver<?php echo $fila['id']; ?>" href="#"><i class="bi bi-eye"></i></a>
+                                        <?php }
+                                        ?> 
+                                        
                                     </td>
                                 </tr>
                                 <?php include "ver_profesor.php"; ?>
