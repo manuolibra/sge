@@ -55,8 +55,7 @@
                                 <th>Profesión</th>
                                 <th>F. Inscripción</th>
                                 <th>Grado</th>
-                                <th>Fecha de Registro</th>
-                                <th>CI Rep</th>
+                                <th>CI Rep2</th>
                                 <th>Representante 2</th>
                                 <th>Rep 2 parentesco</th>
                                 <th>Rep 2 edad</th>
@@ -65,6 +64,7 @@
                                 <th>Rep 2 nacionalidad</th>
                                 <th>Rep 2 estado civil</th>
                                 <th>Profesión</th>
+                                <th>Fecha</th>
                             </tr>
                         </thead>
 

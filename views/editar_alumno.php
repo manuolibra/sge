@@ -18,6 +18,7 @@ $consulta = mysqli_fetch_array($resultado)
             <div class="modal-body">
 
                 <form id="editForm<?php echo $fila['id']; ?>" method="POST">
+                <input type="file" class="form-control mb-3" name="imagen" id="imagen" value="<?php echo $fila['nombre']; ?>">
 
                 <div class="card mb-3">
                     <div class="card-header">
