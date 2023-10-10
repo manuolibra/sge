@@ -80,16 +80,10 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
             </div>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link " href="../views/alumnos.php">
                     <i class="bi bi-person-circle"></i>
                     <span>Alumnos</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../views/alumnos.php">Listado de Alumnos</a>
-
-                    </div>
-                </div>
             </li>
 
 
@@ -97,15 +91,10 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link active" href="../views/profesores.php">
                     <i class="bi bi-person-badge-fill"></i>
                     <span>Personal</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../views/profesores.php">Listado del Personal</a>
-                    </div>
-                </div>
             </li>
 
 
