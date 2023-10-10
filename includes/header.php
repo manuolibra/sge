@@ -27,12 +27,12 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="../vendor/datatables/dataTables.bootstrap5.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../package/dist/sweetalert2.css">
     <!-- Custom styles for this template-->
 
     <link href="../css/sb-admin-2.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../vendor/bootstrap-icons/bootstrap-icons.css">
 
     <script src="../js/jquery.min.js"></script>
 
@@ -51,13 +51,14 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
 
-                <div class=" sidebar-brand-text mx-3">GESTIÓN ESCOLAR<sup></sup>
+                <div class=" sidebar-brand-text mx-2">GESTIÓN ESCOLAR </br> UEE 19 DE ABRIL <sup></sup>
                 </div>
+
             </a>
 
             <!-- Divider -->
@@ -80,13 +81,12 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-folder"></i>
+                    <i class="bi bi-person-circle"></i>
                     <span>Alumnos</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Modulos</h6>
-                        <a class="collapse-item" href="../views/alumnos.php">Ver Alumnos</a>
+                        <a class="collapse-item" href="../views/alumnos.php">Listado de Alumnos</a>
 
                     </div>
                 </div>
@@ -96,15 +96,14 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
 
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class=" nav-item">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-folder"></i>
+                    <i class="bi bi-person-badge-fill"></i>
                     <span>Personal</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Modulos</h6>
-                        <a class="collapse-item" href="../views/profesores.php">Ver Personal</a>
+                        <a class="collapse-item" href="../views/profesores.php">Listado del Personal</a>
                     </div>
                 </div>
             </li>
@@ -119,7 +118,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Modulos</h6>
+                        <h6 class="collapse-header">Módulos</h6>
                         <a class="collapse-item" href="../views/grados.php">Grados</a>
                         <a class="collapse-item" href="../views/especialidades.php">Periodos académicos</a>
                     </div>
@@ -147,7 +146,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                 <!-- Nav Item - Tables -->
                 <li class="nav-item">
                     <a class="nav-link" href="../views/usuarios.php">
-                        <i class="fas fa-fw fa-wrench"></i>
+                    <i class="bi bi-person-fill-lock"></i>
                         <span>Usuarios</span></a>
                 </li>
             <?php }
@@ -205,28 +204,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                         </li>
 
                         <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge bg-danger" id="count-label"></span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <div id="notificationContent">
-
-                                </div>
-
-
-
-
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
+                         
 
                         <?php
                         include "db.php";

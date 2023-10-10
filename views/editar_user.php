@@ -48,12 +48,12 @@
 -->
 
                     <div class="form-group">
-                        <label for="username">Rol de Usuario</label><br>
+                        <label for="username">Tipo de Usuario</label><br>
                         <select name="id_rol" id="id_rol" class="form-control" required>
 
                             <option <?php echo $fila['id_rol'] === '1' ? "selected='selected' " : "" ?> value="1">Administrador</option>
-                            <option <?php echo $fila['id_rol'] === '2' ? "selected='selected' " : "" ?> value="2">Profesor</option>
-                            <option <?php echo $fila['id_rol'] === '3' ? "selected='selected' " : "" ?> value="3">Alumno</option>
+                            <option <?php echo $fila['id_rol'] === '2' ? "selected='selected' " : "" ?> value="2">Editor</option>
+                            <option <?php echo $fila['id_rol'] === '3' ? "selected='selected' " : "" ?> value="3">Lector</option>
                         </select>
                     </div>
 

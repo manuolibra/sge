@@ -64,12 +64,16 @@
                             ?>
                                 <tr>
                                     <td>
-                                        <a class="btn btn-primary" data-toggle="modal" data-target="#ver<?php echo $fila['id']; ?>">Ver</a>
-                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editar<?php echo $fila['id']; ?>">
-                                            <i class="fa fa-edit "></i>
-                                        </button>
-                                        <a href="../includes/eliminar_al.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">
-                                            <i class="fa fa-trash "></i></a>
+                                        <div class="dropdown">
+                                            <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                                Acciones
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" data-toggle="modal" data-target="#ver<?php echo $fila['id']; ?>" href="#">Ver</a></li>
+                                                <li><a class="dropdown-item" data-toggle="modal" data-target="#editar<?php echo $fila['id']; ?>" href="#">Editar</a></li>
+                                                <li><a class="dropdown-item" href="../includes/eliminar_prof.php?id=<?php echo $fila['id'] ?>">Eliminar</a></li>
+                                            </ul>
+                                        </div>
                                     </td>
                                     <td><?php echo $fila['cedula_escolar']; ?></td>
                                     <td><?php echo $fila['nombre']; ?></td>

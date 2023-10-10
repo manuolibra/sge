@@ -23,9 +23,9 @@
                         <thead>
                             <tr>
                                 <th>Usuario</th>
-                                <th>Correo</th>
-                                <th>Rol</th>
-                                <th>Fecha</th>
+                                <th>Correo electrónico</th>
+                                <th>Tipo de Usuario</th>
+                                <th>Fecha de registro</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -41,16 +41,20 @@
                                     <td><?php echo $fila['usuario']; ?></td>
                                     <td><?php echo $fila['correo']; ?></td>
 
-                                    <td><?php echo $fila['id_rol']; ?></td>
+                                    <td><?php echo $fila['id_rol'] === '1' ? "Administrador" :($fila['id_rol'] === '2' ? "Editor" : "Lector"); ?></td>
 
                                     <td><?php echo $fila['fecha']; ?></td>
 
                                     <td>
-                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editar<?php echo $fila['id']; ?>">
-                                            <i class="fa fa-edit "></i>
-                                        </button>
-                                        <a href="../includes/eliminar_user.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">
-                                            <i class="fa fa-trash "></i></a>
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                                Acciones
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" data-toggle="modal" data-target="#editar<?php echo $fila['id']; ?>" href="#">Editar</a></li>
+                                                <li><a class="dropdown-item" href="../includes/eliminar_prof.php?id=<?php echo $fila['id'] ?>">Eliminar</a></li>
+                                            </ul>
+                                        </div>
                                     </td>
                                 </tr>
                                 <?php include "editar_user.php"; ?>
