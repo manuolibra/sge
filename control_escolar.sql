@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-10-2023 a las 22:58:11
--- Versión del servidor: 10.1.38-MariaDB
--- Versión de PHP: 7.3.2
+-- Tiempo de generación: 10-10-2023 a las 23:55:38
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -58,15 +57,27 @@ CREATE TABLE `alumnos` (
   `profesion` varchar(100) NOT NULL,
   `inscripcion` date NOT NULL,
   `id_grado` int(11) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id_rep2` tinyint(4) DEFAULT NULL,
+  `rep2` tinytext DEFAULT NULL,
+  `parentesco2` tinytext DEFAULT NULL,
+  `rep2_edad` tinyint(4) DEFAULT NULL,
+  `rep2_nacimiento` date DEFAULT NULL,
+  `rep2_lugar` tinytext DEFAULT NULL,
+  `rep2_nacionalidad` tinytext DEFAULT NULL,
+  `estado_civil2` tinytext DEFAULT NULL,
+  `profesion2` tinytext DEFAULT NULL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `imagen` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `alumnos`
 --
 
-INSERT INTO `alumnos` (`id`, `nombre`, `apellido`, `cedula_escolar`, `sexo`, `nacionalidad`, `edad`, `lugar`, `birthdate`, `direccion`, `telefono`, `procede`, `tipo`, `nro_hermanos`, `est_hermanos`, `enfermedades`, `vacunas`, `vive`, `id_rep`, `rep`, `parentesco`, `rep_edad`, `rep_nacimiento`, `rep_lugar`, `rep_nacionalidad`, `estado_civil`, `profesion`, `inscripcion`, `id_grado`, `fecha`) VALUES
-(4, 'JOSE GABRIEL', 'VILLALOBOS VILLALOBOS', '29790768', 'M', 'VENEZOLANA', '21', 'San Francisco', '2002-03-05', 'Los Cortijos, Av. 49M, Casa 218A-33', '04127500805', 'UEE TERESA LOPEZ BUSTAMANTE', 'PÃšBLICO', '3', 'SÃ­', 'No', 'Todas', 'MADRE', '18317890', 'KEILA VILLALOBOS', 'Madre', '48', '1976-01-08', 'La Paz', 'Venezolana', 'Soltera', 'Chef', '2023-01-31', 1, '2023-10-08 19:02:41');
+INSERT INTO `alumnos` (`id`, `nombre`, `apellido`, `cedula_escolar`, `sexo`, `nacionalidad`, `edad`, `lugar`, `birthdate`, `direccion`, `telefono`, `procede`, `tipo`, `nro_hermanos`, `est_hermanos`, `enfermedades`, `vacunas`, `vive`, `id_rep`, `rep`, `parentesco`, `rep_edad`, `rep_nacimiento`, `rep_lugar`, `rep_nacionalidad`, `estado_civil`, `profesion`, `inscripcion`, `id_grado`, `id_rep2`, `rep2`, `parentesco2`, `rep2_edad`, `rep2_nacimiento`, `rep2_lugar`, `rep2_nacionalidad`, `estado_civil2`, `profesion2`, `fecha`, `imagen`) VALUES
+(4, 'JOSE GABRIEL', 'VILLALOBOS VILLALOBOS', '29790768', 'M', 'VENEZOLANA', '21', 'San Francisco', '2002-03-05', 'Los Cortijos, Av. 49M, Casa 218A-33', '04127500805', 'UEE TERESA LOPEZ BUSTAMANTE', 'PÃšBLICO', '3', 'SÃ­', 'No', 'Todas', 'MADRE', '18317890', 'KEILA VILLALOBOS', 'Madre', '48', '1976-01-08', 'La Paz', 'Venezolana', 'Soltera', 'Chef', '2023-01-31', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-08 19:02:41', ''),
+(5, 'manuel', 'olivier', '4234234234', 'masculino', 'venezolano', '23', 'mm', '2023-10-12', '324', '234234', '2342', '2342', '23423', '23423', '24324', '234234', '234234', '23423', '234234', '234324', '23423', '2023-10-19', '23423', '234234', '234234', '234234', '2023-10-09', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-08 22:19:19', ''),
+(6, 'Manuel', 'Olivier', '54464', 'Masculino', 'venezolano', '23', '456456456', '2023-10-15', 'Barrio El Manzanillo, Av. 25-C', '04120746710', '46456456456', 'Público', '0', 'No', '464564', '45645645', '544654', '464564', '46456', '464564', '456', '0666-07-13', '4646545', '456456', 'Soltero', '46456464', '2023-10-09', 2, 127, '55453453', '4534534', 127, '2023-10-13', '4646545', '464646', 'Soltero', '4564646', '2023-10-10 21:53:55', '');
 
 -- --------------------------------------------------------
 
@@ -77,8 +88,8 @@ INSERT INTO `alumnos` (`id`, `nombre`, `apellido`, `cedula_escolar`, `sexo`, `na
 CREATE TABLE `especialidades` (
   `id` int(11) NOT NULL,
   `especialidad` varchar(100) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -90,8 +101,8 @@ CREATE TABLE `grados` (
   `id` int(11) NOT NULL,
   `descripcion` varchar(150) NOT NULL,
   `duracion` varchar(50) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `grados`
@@ -114,8 +125,8 @@ CREATE TABLE `materias` (
   `per_ini` date NOT NULL,
   `per_fin` date NOT NULL,
   `id_grado` int(11) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -126,7 +137,7 @@ CREATE TABLE `materias` (
 CREATE TABLE `permisos` (
   `id` int(11) NOT NULL,
   `rol` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `permisos`
@@ -153,8 +164,15 @@ CREATE TABLE `profesores` (
   `edad` varchar(50) NOT NULL,
   `fecha_na` date NOT NULL,
   `id_especialidad` int(11) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `profesores`
+--
+
+INSERT INTO `profesores` (`id`, `cedula`, `nombres`, `apellidos`, `correo`, `curp`, `edad`, `fecha_na`, `id_especialidad`, `fecha`) VALUES
+(4, '45645656', '546456456', '45345', '4564@gmail.com', '4533453', '453453', '2023-10-13', 0, '2023-10-09 23:56:04');
 
 -- --------------------------------------------------------
 
@@ -167,17 +185,19 @@ CREATE TABLE `users` (
   `usuario` varchar(50) NOT NULL,
   `correo` varchar(50) NOT NULL,
   `password` varchar(300) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `id_rol` int(11) NOT NULL,
   `imagen` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`id`, `usuario`, `correo`, `password`, `fecha`, `id_rol`, `imagen`) VALUES
-(21, 'admin', 'admin@mail.com ', '$2y$05$X1qw3Kxu3Hm3vl4tPmzgzOOllW9emX2kz20bLxVDVG47gKzyvWzIO', '2023-10-08 20:32:50', 1, '');
+(21, 'admin', 'admin@mail.com ', '$2y$05$X1qw3Kxu3Hm3vl4tPmzgzOOllW9emX2kz20bLxVDVG47gKzyvWzIO', '2023-10-08 20:32:50', 1, ''),
+(22, 'editor', 'lector@gmail.com', '$2y$05$yQaBREZyiY8AELY6D/OyJeIGfwPmJhFQpXckYlZwImwyZQoGiYNB.', '2023-10-10 02:43:57', 2, ''),
+(23, 'lector', 'fssfs@hotmail.com ', '$2y$05$pLLlN5Ti7soaaTjEzL3T0eU5AsczuH/Y5rd.0sYp8DhrlpePYKGEm', '2023-10-10 02:44:16', 3, '');
 
 --
 -- Índices para tablas volcadas
@@ -233,7 +253,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `especialidades`
@@ -263,13 +283,13 @@ ALTER TABLE `permisos`
 -- AUTO_INCREMENT de la tabla `profesores`
 --
 ALTER TABLE `profesores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
