@@ -12,7 +12,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Alumnos</h6>
                 <br>
 
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#alumno">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#alumno">
                     <span class="glyphicon glyphicon-plus"></span> Agregar <i class="fa fa-plus"></i> </a></button>
             </div>
             <?php include "form_alumno.php"; ?>
@@ -65,12 +65,12 @@
                                 <tr>
                                     <td>
                                         <div class="dropdown">
-                                            <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                            <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Acciones
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" data-toggle="modal" data-target="#ver<?php echo $fila['id']; ?>" href="#">Ver</a></li>
-                                                <li><a class="dropdown-item" data-toggle="modal" data-target="#editar<?php echo $fila['id']; ?>" href="#">Editar</a></li>
+                                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ver<?php echo $fila['id']; ?>" href="#">Ver</a></li>
+                                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editar<?php echo $fila['id']; ?>" href="#">Editar</a></li>
                                                 <li><a class="dropdown-item" href="../includes/eliminar_prof.php?id=<?php echo $fila['id'] ?>">Eliminar</a></li>
                                             </ul>
                                         </div>

@@ -12,7 +12,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Lista de Asignaturas</h6>
                 <br>
 
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#mat">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#mat">
                     <span class="glyphicon glyphicon-plus"></span> Agregar <i class="fa fa-plus"></i> </a></button>
             </div>
             <?php include "form_mat.php"; ?>
@@ -48,7 +48,7 @@
                                     <td><?php echo $fila['fecha']; ?></td>
 
                                     <td>
-                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editar<?php echo $fila['id']; ?>">
+                                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editar<?php echo $fila['id']; ?>">
                                             <i class="fa fa-edit "></i>
                                         </button>
                                         <a href="../includes/eliminar_mat.php?id=<?php echo $fila['id'] ?>" class="btn btn-danger btn-del">

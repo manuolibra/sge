@@ -3,7 +3,7 @@
 		<div class="modal-content">
 		<div class="modal-header">
 			<h2 class="modal-title" id="exampleModalLabel"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $fila['nombre']; ?> <?php echo $fila['apellido']; ?></h5>
-			<button type="button" class="btn" data-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+			<button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
 		</div>
 		<div class="modal-body">
 		<div class="container" id="profile"> 
@@ -53,7 +53,7 @@
 		</div>   
 		</div>
 		<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
 		</div>
 		</form>
 		</div>

@@ -12,7 +12,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Lista de Usuarios</h6>
                 <br>
 
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#user">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#user">
                     <span class="glyphicon glyphicon-plus"></span> Agregar usuario <i class="fa fa-user-plus"></i> </a></button>
             </div>
             <?php include "form_user.php"; ?>
@@ -47,11 +47,11 @@
 
                                     <td>
                                         <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Acciones
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" data-toggle="modal" data-target="#editar<?php echo $fila['id']; ?>" href="#">Editar</a></li>
+                                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editar<?php echo $fila['id']; ?>" href="#">Editar</a></li>
                                                 <li><a class="dropdown-item" href="../includes/eliminar_prof.php?id=<?php echo $fila['id'] ?>">Eliminar</a></li>
                                             </ul>
                                         </div>
