@@ -56,6 +56,15 @@
                                 <th>F. Inscripción</th>
                                 <th>Grado</th>
                                 <th>Fecha de Registro</th>
+                                <th>CI Rep</th>
+                                <th>Representante 2</th>
+                                <th>Rep 2 parentesco</th>
+                                <th>Rep 2 edad</th>
+                                <th>Rep 2 fecha n</th>
+                                <th>Rep 2 lugar n</th>
+                                <th>Rep 2 nacionalidad</th>
+                                <th>Rep 2 estado civil</th>
+                                <th>Profesión</th>
                             </tr>
                         </thead>
 
@@ -116,11 +125,35 @@
                                     <td><?php echo $fila['estado_civil']; ?></td>
                                     <td><?php echo $fila['profesion']; ?></td>
                                     <td><?php echo $fila['inscripcion']; ?></td>
-                                    <td><?php echo $fila['id_grado']; ?></td>
+
+                                    <td>
+                                        <?php
+                                            include("db.php");
+
+                                            $sql = "SELECT * FROM grados ";
+                                            $resultado = mysqli_query($conexion, $sql);
+                                            while ($consulta = mysqli_fetch_array($resultado)) {
+                                                if ($consulta['id'] === $fila['id_grado']) {
+                                                    echo $consulta['descripcion'];
+                                                } else {
+                                                    continue;
+                                                }
+                                            }
+                                        ?>
+                                    
+                                    </td>
+                                    <td><?php echo $fila['id_rep2']; ?></td>
+                                    <td><?php echo $fila['rep2']; ?></td>
+                                    <td><?php echo $fila['parentesco2']; ?></td>
+                                    <td><?php echo $fila['rep2_edad']; ?></td>
+                                    <td><?php echo $fila['rep2_nacimiento']; ?></td>
+                                    <td><?php echo $fila['rep2_lugar']; ?></td>
+                                    <td><?php echo $fila['rep2_nacionalidad']; ?></td>
+                                    <td><?php echo $fila['estado_civil2']; ?></td>
+                                    <td><?php echo $fila['profesion2']; ?></td>
                                     <td><?php echo $fila['fecha']; ?></td>
                                 </tr>
                                 <?php include "ver_alumno.php"; ?>
-
                                 <?php include "editar_alumno.php"; ?>
                             <?php endwhile; ?>
                         </tbody>
