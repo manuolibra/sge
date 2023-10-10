@@ -27,15 +27,15 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <!-- <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="../package/dist/sweetalert2.css">
     <!-- Custom styles for this template-->
-
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../vendor/bootstrap-icons/bootstrap-icons.css">
 
     <script src="../js/jquery.min.js"></script>
-
+    
 </head>
 <style>
     .lgs {

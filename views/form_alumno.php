@@ -11,7 +11,7 @@
                 <form id="alumForm">
 
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 form-floating">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombres</label>
                                 <input type="text" name="nombre" id="nombre" class="form-control" required>
@@ -20,57 +20,61 @@
                         </div>
 
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 form-floating">
                             <div class="mb-3">
-                                <label for="password">Apellidos</label><br>
+                                <label for="apellido">Apellidos</label><br>
                                 <input type="text" name="apellido" id="apellido" class="form-control" required>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 form-floating">
                             <div class="mb-3">
-                                <label for="password">Cédula escolar</label><br>
+                                <label for="cedula_escolar">Cédula escolar</label><br>
                                 <input type="text" name="cedula_escolar" id="cedula_escolar" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
-                            <div class="mb-3">
-                                <label for="password">Sexo</label><br>
-                                <input type="text" name="sexo" id="sexo" class="form-control" required>
-                            </div>
+
+
+                            <select class="form-control mb-3" name="sexo" aria-label="sexo">
+                                <option selected>Sexo</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Femenino</option>
+                            </select>
+
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6  form-floating">
                             <div class="mb-3">
-                                <label for="password">Nacionalidad</label><br>
+                                <label for="nacionalidad">Nacionalidad</label><br>
                                 <input type="text" name="nacionalidad" id="nacionalidad" class="form-control" required>
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 form-floating">
                             <div class="mb-3">
-                                <label for="password">Edad</label><br>
+                                <label for="edad">Edad</label><br>
                                 <input type="number" name="edad" id="edad" class="form-control" required>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 form-floating">
                             <div class="mb-3">
-                                <label for="password">Lugar de Nacimiento</label><br>
+                                <label for="lugar">Lugar de Nacimiento</label><br>
                                 <input type="text" name="lugar" id="lugar" class="form-control" required>
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 form-floating">
                             <div class="mb-3">
-                                <label for="password">Fecha de Nacimiento</label><br>
+                                <label for="birthdate">Fecha de Nacimiento</label><br>
                                 <input type="date" name="birthdate" id="birthdate" class="form-control" required>
                             </div>
                         </div>
@@ -232,7 +236,7 @@
 
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Grado</label><br>
+                                <label for="id_grado">Grado</label><br>
                                 <select name="id_grado" id="id_grado" class="form-control" required>
                                     <option value="">Selecciona una opcion</option>
                                     <?php
