@@ -11,12 +11,11 @@
 			<div class="row">
 				<div class="col">
 					<div class="card" style="width: 100%; margin-bottom: 10px">
-						<!-- <img src="upload_images/$imagen" class="card-img-top" alt="..."> -->
+					<img src='../img/undraw_profile.svg' class='card-img-top' alt='...' style='width: 150px; height: 150px; margin-left: 10px;'>
 						<div class="card-body">
 							<p class="card-text">
-								<i class="fa fa-id-card" aria-hidden="true"></i><br>
-								<i class="fa fa-phone" aria-hidden="true"></i> $telefono  <br>
-								Issue Date : $time
+								<i class="fa fa-id-card" aria-hidden="true"><?php echo $fila['cedula']; ?></i><br>
+								<strong>Issue Date :</strong> <?php echo $fila['fecha']; ?>
 							</p>
 						</div>
 					</div>
@@ -24,13 +23,15 @@
 
 				<div class="col">
 					<p class="text-secondary">
-						<strong>Representante 1:</strong> $rep_nombre <br>
-						<strong>Cédula Estudiantil:</strong> $cedula_escolar <br>
-						<i class="fa fa-venus-mars" aria-hidden="true"></i> $sexo
-						<br />
-						<i class="fa fa-envelope-o" aria-hidden="true"></i> Email
-						<br />
-						<p><i class="fa fa-home" aria-hidden="true"></i> Address : dirección </p>
+						<strong>Edad:</strong><?php echo $fila['edad']; ?><br>
+						
+						<strong>Curp:</strong><?php echo $fila['curp']; ?><br>
+						
+						<strong>Fecha de Nacimiento:</strong><?php echo $fila['fecha_na']; ?>
+						
+						<strong>Email:</strong><?php echo $fila['correo']; ?>
+						
+						<strong>Especialidad:</strong><?php echo $fila['id_especialidad']; ?>
 					</p>
 					<!-- Split button -->
 				</div>
@@ -38,17 +39,7 @@
 			</div>
 			
 
-			<div class="row">
-				<div class="col">
-					<div class="card" style="width: 100%; margin-top: 5px;">
-					<h5 class="card-title"><i class="fa fa-users" aria-hidden="true"></i> Familia:</h5>
-						<div class="card-body">
-							<p class="card-text"> Familiares </p>
-						</div>
-					</div>
-				</div>
-
-			</div>
+			
 
 		</div>   
 		</div>
