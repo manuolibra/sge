@@ -13,14 +13,14 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Cédula</label>
+                                <label for="cedula" class="form-label">Cédula</label>
                                 <input type="text" id="cedula" name="cedula" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
+                                <label for="nombres" class="form-label">Nombre</label>
                                 <input type="text" name="nombres" id="nombres" class="form-control" required>
                             </div>
                         </div>
@@ -29,14 +29,14 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Apellidos</label><br>
+                                <label for="apellidos">Apellidos</label><br>
                                 <input type="text" name="apellidos" id="apellidos" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Correo</label><br>
+                                <label for="correo">Correo</label><br>
                                 <input type="email" name="correo" id="correo" class="form-control" required>
                             </div>
                         </div>
@@ -186,7 +186,6 @@
                         </div>
                     </div>
 
-                    <br>
                     <input type="hidden" name="accion" value="insert_prof">
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary" id="register" name="registrar">Guardar</button>
@@ -219,6 +218,7 @@
                 },
                 error: function(xhr, status, error) {
                     alert('Error: Ocurrió un error inesperado');
+                    console.log({error})
                 }
             });
         });

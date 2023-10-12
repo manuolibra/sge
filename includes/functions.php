@@ -140,7 +140,7 @@ function insert_prof()
     include "db.php";
 
     $consulta = "INSERT INTO profesores (cedula, nombres, apellidos, correo, curp, edad, fecha_na, lugar_na, estado_civil, direccion, niv_edu, m_acad, est_post, cursos, t_servicio, f_ingreso, tipo_p, cargo, l_cobra, l_labora, d_cargo, codigo) 
-    VALUES ('$cedula', '$nombres','$apellidos','$correo','$curp','$edad','$fecha_na', '$lugar_na', '$estado_civil', '$direccion', '$niv_edu', '$m_acad', '$est_post, '$cursos', '$t_servicio', '$f_ingreso', '$tipo_p', '$cargo', '$l_cobra', '$l_labora', '$d_cargo', '$codigo')";
+    VALUES ('$cedula', '$nombres','$apellidos','$correo','$curp','$edad','$fecha_na', '$lugar_na', '$estado_civil', '$direccion', '$niv_edu', '$m_acad', '$est_post', '$cursos', '$t_servicio', '$f_ingreso', '$tipo_p', '$cargo', '$l_cobra', '$l_labora', '$d_cargo', '$codigo')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
