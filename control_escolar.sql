@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-10-2023 a las 23:55:38
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 12-10-2023 a las 20:48:46
+-- Versión del servidor: 10.1.38-MariaDB
+-- Versión de PHP: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -58,17 +59,17 @@ CREATE TABLE `alumnos` (
   `inscripcion` date NOT NULL,
   `id_grado` int(11) NOT NULL,
   `id_rep2` tinyint(4) DEFAULT NULL,
-  `rep2` tinytext DEFAULT NULL,
-  `parentesco2` tinytext DEFAULT NULL,
+  `rep2` tinytext,
+  `parentesco2` tinytext,
   `rep2_edad` tinyint(4) DEFAULT NULL,
   `rep2_nacimiento` date DEFAULT NULL,
-  `rep2_lugar` tinytext DEFAULT NULL,
-  `rep2_nacionalidad` tinytext DEFAULT NULL,
-  `estado_civil2` tinytext DEFAULT NULL,
-  `profesion2` tinytext DEFAULT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `rep2_lugar` tinytext,
+  `rep2_nacionalidad` tinytext,
+  `estado_civil2` tinytext,
+  `profesion2` tinytext,
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `imagen` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `alumnos`
@@ -88,8 +89,8 @@ INSERT INTO `alumnos` (`id`, `nombre`, `apellido`, `cedula_escolar`, `sexo`, `na
 CREATE TABLE `especialidades` (
   `id` int(11) NOT NULL,
   `especialidad` varchar(100) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -101,8 +102,8 @@ CREATE TABLE `grados` (
   `id` int(11) NOT NULL,
   `descripcion` varchar(150) NOT NULL,
   `duracion` varchar(50) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `grados`
@@ -125,8 +126,8 @@ CREATE TABLE `materias` (
   `per_ini` date NOT NULL,
   `per_fin` date NOT NULL,
   `id_grado` int(11) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -137,7 +138,7 @@ CREATE TABLE `materias` (
 CREATE TABLE `permisos` (
   `id` int(11) NOT NULL,
   `rol` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `permisos`
@@ -164,15 +165,31 @@ CREATE TABLE `profesores` (
   `edad` varchar(50) NOT NULL,
   `fecha_na` date NOT NULL,
   `id_especialidad` int(11) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `lugar_na` varchar(150) NOT NULL,
+  `estado_civil` varchar(150) NOT NULL,
+  `direccion` varchar(200) NOT NULL,
+  `niv_edu` varchar(150) NOT NULL,
+  `m_acad` varchar(150) NOT NULL,
+  `est_post` varchar(150) NOT NULL,
+  `cursos` varchar(200) NOT NULL,
+  `t_servicio` varchar(100) NOT NULL,
+  `f_ingreso` date NOT NULL,
+  `tipo_p` varchar(150) NOT NULL,
+  `cargo` varchar(100) NOT NULL,
+  `l_cobra` varchar(150) NOT NULL,
+  `l_labora` varchar(150) NOT NULL,
+  `d_cargo` varchar(150) NOT NULL,
+  `codigo` varchar(100) NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `profesores`
 --
 
-INSERT INTO `profesores` (`id`, `cedula`, `nombres`, `apellidos`, `correo`, `curp`, `edad`, `fecha_na`, `id_especialidad`, `fecha`) VALUES
-(4, '45645656', '546456456', '45345', '4564@gmail.com', '4533453', '453453', '2023-10-13', 0, '2023-10-09 23:56:04');
+INSERT INTO `profesores` (`id`, `cedula`, `nombres`, `apellidos`, `correo`, `curp`, `edad`, `fecha_na`, `id_especialidad`, `lugar_na`, `estado_civil`, `direccion`, `niv_edu`, `m_acad`, `est_post`, `cursos`, `t_servicio`, `f_ingreso`, `tipo_p`, `cargo`, `l_cobra`, `l_labora`, `d_cargo`, `codigo`, `fecha`) VALUES
+(4, '45645656', '546456456', '45345', '4564@gmail.com', '4533453', '453453', '2023-10-13', 0, '', '', '', '', '', '', '', '', '0000-00-00', '', '', '', '', '', '', '2023-10-09 23:56:04'),
+(5, '29790768', 'JOSE GABRIEL', 'VILLALOBOS', 'josegabovillalobos@gmail.com', 'VENEZOLANO', '21', '2002-03-05', 0, 'LOS CORTIJOS', 'SOLTERO', 'SAN FRANCSICO', 'PRIMARIA', 'PASJD', 'LCDS', 'CONTADURIA', '5 meses', '2020-01-31', 'OBRERO', 'BAMA', 'CONCEOCIO', 'ALA', 'PROFESOR', '636232378', '2023-10-12 18:46:11');
 
 -- --------------------------------------------------------
 
@@ -185,10 +202,10 @@ CREATE TABLE `users` (
   `usuario` varchar(50) NOT NULL,
   `correo` varchar(50) NOT NULL,
   `password` varchar(300) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `id_rol` int(11) NOT NULL,
   `imagen` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `users`
@@ -283,7 +300,7 @@ ALTER TABLE `permisos`
 -- AUTO_INCREMENT de la tabla `profesores`
 --
 ALTER TABLE `profesores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
