@@ -15,10 +15,8 @@
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Cédula</label>
                                 <input type="text" id="cedula" name="cedula" class="form-control" required>
-
                             </div>
                         </div>
-
 
                         <div class="col-sm-6">
                             <div class="mb-3">
@@ -160,7 +158,7 @@
                         <div class="col-sm-6">
                             <div class="mb-3">
                                 <label for="password">Lugar en donde cobra</label><br>
-                                <input type="text" name="l_cobra" id="l_labora" class="form-control" required>
+                                <input type="text" name="l_cobra" id="l_cobra" class="form-control" required>
                             </div>
                         </div>
 
