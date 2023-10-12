@@ -139,8 +139,8 @@ function insert_prof()
     extract($_POST);
     include "db.php";
 
-    $consulta = "INSERT INTO profesores (cedula, nombres, apellidos,correo,curp,edad,fecha_na, id_especialidad) 
-    VALUES ('$cedula', '$nombres','$apellidos','$correo','$curp','$edad','$fecha_na', '$id_especialidad')";
+    $consulta = "INSERT INTO profesores (cedula, nombres, apellidos, correo, curp, edad, fecha_na, lugar_na, estado_civil, niv_edu, m_acad, est_post, cursos, t_servicio, f_ingreso, tipo_p, cargo, l_cobra, l_labora, d_cargo, codigo) 
+    VALUES ('$cedula', '$nombres','$apellidos','$correo','$curp','$edad','$fecha_na', '$lugar_na', '$estado_civil', '$niv_edu', '$m_acad', '$est_post, '$cursos', '$tipo_p', '$cargo', '$l_cobra', '$l_labora', '$d_cargo', '$codigo')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -192,7 +192,7 @@ function editar_profe()
 
 
     $consulta = "UPDATE profesores SET cedula = '$cedula', nombres = '$nombres', apellidos = '$apellidos', correo = '$correo',
-    curp = '$curp', edad='$edad', fecha_na = '$fecha_na',id_especialidad = '$id_especialidad' WHERE id = '$id' ";
+    curp = '$curp', edad='$edad', fecha_na = '$fecha_na', lugar_na = '$lugar_na', estado_civil = '$estado_civil', direccion = '$direccion', niv_edu = '$niv_edu', m_acad = '$m_acad', est_post = '$est_post', cursos = '$cursos', t_servicio = '$t_servicio', f_ingreso = '$f_ingreso', tipo_p = '$tipo_p', cargo = '$cargo', l_cobra = '$l_cobra', l_labora = '$l_labora', d_cargo = '$d_cargo', codigo = '$codigo' WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {

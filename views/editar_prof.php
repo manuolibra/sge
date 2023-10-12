@@ -14,7 +14,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Cedula</label>
+                                <label for="nombre" class="form-label">Cédula</label>
                                 <input type="text" id="cedula" name="cedula" class="form-control" value="<?php echo $fila['cedula']; ?>" required>
 
                             </div>
@@ -48,7 +48,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Curp</label><br>
+                                <label for="password">Nacionalidad</label><br>
                                 <input type="text" name="curp" id="curp" class="form-control" value="<?php echo $fila['curp']; ?>" required>
                             </div>
                         </div>
@@ -71,21 +71,120 @@
 
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Especialidad</label><br>
-                                <select name="id_especialidad" id="id_especialidad" class="form-control">
-                                    <option <?php echo $fila['id_especialidad'] === 'id_especialidad' ? 'selected' : ''; ?> value="<?php echo $fila['id_especialidad']; ?>"><?php echo $fila['id_especialidad']; ?></option>
-                                    <?php
+                                <label for="password">Lugar de Nacimiento</label><br>
+                                <input type="text" name="lugar_na" id="lugar_na" class="form-control" value="<?php echo $fila['lugar_na']; ?>" required>
+                            </div>
+                        </div>
+                    </div>
 
-                                    include("db.php");
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Estado Civil</label><br>
+                                <input type="text" name="estado_civil" id="estado_civil" class="form-control" value="<?php echo $fila['estado_civil']; ?>" required>
+                            </div>
+                        </div>
 
-                                    $sql = "SELECT * FROM especialidades ";
-                                    $resultado = mysqli_query($conexion, $sql);
-                                    while ($consulta = mysqli_fetch_array($resultado)) {
-                                        echo '<option value="' . $consulta['id'] . '">' . $consulta['especialidad'] . ' ' . $consulta['apellidos'] . '</option>';
-                                    }
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Dirección</label><br>
+                                <input type="text" name="direccion" id="direccion" class="form-control" value="<?php echo $fila['direccion']; ?>" required>
+                            </div>
+                        </div>
+                    </div>
 
-                                    ?>
-                                </select>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Nivel de Educación</label><br>
+                                <input type="text" name="niv_edu" id="niv_edu" class="form-control" value="<?php echo $fila['niv_edu']; ?>" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Mención Académica</label><br>
+                                <input type="text" name="m_acad" id="m_acad" class="form-control" value="<?php echo $fila['m_acad']; ?>" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Estudio de Postgrado</label><br>
+                                <input type="text" name="est_post" id="est_post" class="form-control" value="<?php echo $fila['est_post']; ?>" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Cursos realizados</label><br>
+                                <input type="text" name="cursos" id="cursos" class="form-control" value="<?php echo $fila['cursos']; ?>" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Tiempo de Servicio</label><br>
+                                <input type="text" name="t_servicio" id="t_servicio" class="form-control" value="<?php echo $fila['t_servicio']; ?>" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Fecha de Ingreso</label><br>
+                                <input type="date" name="f_ingreso" id="f_ingreso" class="form-control" value="<?php echo $fila['f_ingreso']; ?>" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Tipo de Personal</label><br>
+                                <input type="text" name="tipo_p" id="tipo_p" class="form-control" value="<?php echo $fila['tipo_p']; ?>" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Cargo</label><br>
+                                <input type="text" name="cargo" id="cargo" class="form-control" value="<?php echo $fila['cargo']; ?>" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Lugar en donde cobra</label><br>
+                                <input type="text" name="l_cobra" id="l_cobra" class="form-control" value="<?php echo $fila['l_cobra']; ?>" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Lugar donde labora</label><br>
+                                <input type="text" name="l_labora" id="l_labora" class="form-control" value="<?php echo $fila['l_labora']; ?>" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Denominación de Cargo</label><br>
+                                <input type="text" name="d_cargo" id="d_cargo" class="form-control" value="<?php echo $fila['d_cargo']; ?>" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="password">Código</label><br>
+                                <input type="text" name="codigo" id="codigo" class="form-control" value="<?php echo $fila['codigo']; ?>" required>
                             </div>
                         </div>
                     </div>
