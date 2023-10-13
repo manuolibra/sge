@@ -55,7 +55,10 @@
     buttons: [ {
         extend: 'excelHtml5',
         className: 'btn btn-info',
-        text: 'Exportar a Excel'
+        text: 'Exportar a Excel',
+        exportOptions: {
+            columns: ['th:not(:first-child)']
+        }
     },
     { 
             extend: 'colvis',
