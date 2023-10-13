@@ -8,7 +8,7 @@
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
-            <div class="card-header py-3">
+            <div class="card-header py-3" id="barra">
                 <h6 class="m-0 font-weight-bold text-primary">Personal del Plantel</h6>
                 
                 <?php if ($_SESSION["type"] != 3) { ?>
@@ -23,19 +23,19 @@
 
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered" id="tabla" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Cedula</th>
-                                <th>Nombre</th>
+                                <th class='ver'>Acciones</th>
+                                <th class='ver'>Cedula</th>
+                                <th class='ver'>Nombre</th>
                                 <th>Apellido</th>
                                 <th>Correo</th>
-                                <th>CURP</th>
+                                <th>Nacionalidad</th>
                                 <th>Edad</th>
-                                <th>Nacimiento</th>
-                                <th>Especialidad</th>
-                                <th>Fecha_Registro</th>
-                                <th>Acciones.</th>
+                                <th>Fecha de Nacimiento</th>
+                                <th class='ver'>Especialidad</th>
+                                <th>Fecha_Registro</th>    
                             </tr>
                         </thead>
 
@@ -47,16 +47,6 @@
 
                             ?>
                                 <tr>
-                                    <td><?php echo $fila['cedula']; ?></td>
-                                    <td><?php echo $fila['nombres']; ?></td>
-                                    <td><?php echo $fila['apellidos']; ?></td>
-                                    <td><?php echo $fila['correo']; ?></td>
-                                    <td><?php echo $fila['curp']; ?></td>
-                                    <td><?php echo $fila['edad']; ?></td>
-                                    <td><?php echo $fila['fecha_na']; ?></td>
-                                    <td><?php echo $fila['id_especialidad']; ?></td>
-                                    <td><?php echo $fila['fecha']; ?></td>
-
                                     <td>
 
                                         <?php if ($_SESSION["type"] != 3) { ?> <!-- Sólo el administrador y editor -->
@@ -77,8 +67,17 @@
                                             <a class="btn btn-info" data-bs-toggle="modal" data-bs-target="#ver<?php echo $fila['id']; ?>" href="#"><i class="bi bi-eye"></i></a>
                                         <?php }
                                         ?> 
-                                        
+
                                     </td>
+                                    <td><?php echo $fila['cedula']; ?></td>
+                                    <td><?php echo $fila['nombres']; ?></td>
+                                    <td><?php echo $fila['apellidos']; ?></td>
+                                    <td><?php echo $fila['correo']; ?></td>
+                                    <td><?php echo $fila['curp']; ?></td>
+                                    <td><?php echo $fila['edad']; ?></td>
+                                    <td><?php echo $fila['fecha_na']; ?></td>
+                                    <td><?php echo $fila['id_especialidad']; ?></td>
+                                    <td><?php echo $fila['fecha']; ?></td>
                                 </tr>
                                 <?php include "ver_profesor.php"; ?>
                                 <?php include "editar_prof.php"; ?>

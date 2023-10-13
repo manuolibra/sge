@@ -23,17 +23,55 @@
 <script src="../js/sb-admin-2.min.js"></script>
 
 <!-- Page level plugins -->
-<script src="../vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-<!-- Page level custom scripts -->
-<script src="../js/demo/datatables-demo.js"></script>
 <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- SweetAlert2 -->
 
 <script src="../package/dist/sweetalert2.all.js"></script>
 <script src="../package/dist/sweetalert2.all.min.js"></script>
+<script src="../vendor/datatables/datatables.min.js"></script>
+
 
 </body>
 
 </html>
+
+<script>
+    var tabla = $('#tabla').DataTable( {
+        responsive: {
+        details: false
+    },
+        language: {
+        url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json',
+    },
+        columnDefs: [
+        { targets: ['ver'], visible: true},
+        { targets: '_all', visible: false }
+    ],
+    });
+
+    new $.fn.dataTable.Buttons( tabla, {
+    name: 'commands',
+    buttons: [ {
+        extend: 'excelHtml5',
+        className: 'btn btn-info',
+        text: 'Exportar a Excel'
+    },
+    { 
+            extend: 'colvis',
+            text: 'Visibilidad',
+            columns: '',
+            classname: 'btn btn-secondary'
+        }],
+} );
+
+</script>
+
+<?php if ($_SESSION["type"] != 3) { ?>
+
+    <script>
+tabla.buttons().containers().appendTo( 'div#barra' );
+    </script>
+
+<?php }
+?> 

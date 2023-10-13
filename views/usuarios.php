@@ -19,14 +19,14 @@
 
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered" id="tabla" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Usuario</th>
-                                <th>Correo electrónico</th>
-                                <th>Tipo de Usuario</th>
-                                <th>Fecha de registro</th>
-                                <th>Acciones</th>
+                                <th class='ver'>Acciones</th>
+                                <th class='ver'>Usuario</th>
+                                <th class='ver'>Correo electrónico</th>
+                                <th class='ver'>Tipo de Usuario</th>
+                                <th class='ver'>Fecha de registro</th>
                             </tr>
                         </thead>
 
@@ -37,14 +37,7 @@
                             while ($fila = mysqli_fetch_assoc($result)) :
 
                             ?>
-                                <tr>
-                                    <td><?php echo $fila['usuario']; ?></td>
-                                    <td><?php echo $fila['correo']; ?></td>
-
-                                    <td><?php echo $fila['id_rol'] === '1' ? "Administrador" :($fila['id_rol'] === '2' ? "Editor" : "Lector"); ?></td>
-
-                                    <td><?php echo $fila['fecha']; ?></td>
-
+                                <tr> 
                                     <td>
                                         <div class="dropdown">
                                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -56,6 +49,14 @@
                                             </ul>
                                         </div>
                                     </td>
+                                    <td><?php echo $fila['usuario']; ?></td>
+                                    <td><?php echo $fila['correo']; ?></td>
+
+                                    <td><?php echo $fila['id_rol'] === '1' ? "Administrador" :($fila['id_rol'] === '2' ? "Editor" : "Lector"); ?></td>
+
+                                    <td><?php echo $fila['fecha']; ?></td>
+
+                                   
                                 </tr>
                                 <?php include "editar_user.php"; ?>
                             <?php endwhile; ?>

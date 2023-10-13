@@ -8,7 +8,7 @@
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
-            <div class="card-header py-3">
+            <div class="card-header py-3" id="barra">
                 <h6 class="m-0 font-weight-bold text-primary">Alumnos del Plantel</h6>
                 
                 <?php if ($_SESSION["type"] != 3) { ?> <!-- Sólo el administrador y editor -->
@@ -23,13 +23,13 @@
 
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered" id="tabla" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Acciones</th>
-                                <th>Cédula escolar</th>
-                                <th>Nombres</th>
-                                <th>Apellidos</th>
+                                <th class='ver'>Acciones</th>
+                                <th class='ver'>Cédula escolar</th>
+                                <th class='ver'>Nombres</th>
+                                <th class='ver'>Apellidos</th>
                                 <th>Sexo</th>
                                 <th>Nacionalidad</th>
                                 <th>Edad</th>
@@ -44,8 +44,8 @@
                                 <th>Enfermedades</th>
                                 <th>Vacunas</th>
                                 <th>¿Con quién vive?</th>
-                                <th>CI Rep</th>
-                                <th>Representante</th>
+                                <th>Cédula del Representante</th>
+                                <th class='ver'>Representante 1</th>
                                 <th>Rep parentesco</th>
                                 <th>Rep edad</th>
                                 <th>Rep fecha n</th>
@@ -54,9 +54,9 @@
                                 <th>Rep estado civil</th>
                                 <th>Profesión</th>
                                 <th>F. Inscripción</th>
-                                <th>Grado</th>
+                                <th class='ver'>Grado</th>
                                 <th>CI Rep2</th>
-                                <th>Representante 2</th>
+                                <th class='ver'>Representante 2</th>
                                 <th>Rep 2 parentesco</th>
                                 <th>Rep 2 edad</th>
                                 <th>Rep 2 fecha n</th>

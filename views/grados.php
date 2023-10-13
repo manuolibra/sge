@@ -23,14 +23,13 @@
 
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered" id="tabla" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Grado</th>
+                                <th class='ver'>Acciones</th>
+                                <th class='ver'>Grado</th>
                                 <th>Duracion</th>
-
                                 <th>Fecha_registro</th>
-                                <th>Acciones</th>
                             </tr>
                         </thead>
 
@@ -42,10 +41,6 @@
 
                             ?>
                                 <tr>
-                                    <td><?php echo $fila['descripcion']; ?></td>
-                                    <td><?php echo $fila['duracion']; ?></td>
-                                    <td><?php echo $fila['fecha']; ?></td>
-
                                     <td>
 
                                         <?php if ($_SESSION["type"] != 3) { ?> <!-- Sólo el administrador y editor -->
@@ -62,6 +57,11 @@
                                         ?>
 
                                     </td>
+                                    <td><?php echo $fila['descripcion']; ?></td>
+                                    <td><?php echo $fila['duracion']; ?></td>
+                                    <td><?php echo $fila['fecha']; ?></td>
+
+                                    
                                 </tr>
                                 <?php include "editar_grado.php"; ?>
                             <?php endwhile; ?>
