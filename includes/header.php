@@ -206,7 +206,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                             }
                         }
                         ?>
-                        <input type="button" class="btn btn-dark" value="Refrescar" onclick="document.location.reload();">
+                        <button style = "color:white;" type="button" class="btn btn-link-white bi bi-arrow-clockwise" onclick="document.location.reload();"></button>
                         <div class="topbar-divider d-none d-sm-block"></div>
                         
 
