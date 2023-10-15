@@ -112,7 +112,7 @@ function insert_grado()
     extract($_POST);
     include "db.php";
 
-    $consulta = "INSERT INTO grados (descripcion, duracion) VALUES ('$descripcion', '$duracion')";
+    $consulta = "INSERT INTO grados (descripcion, profesor) VALUES ('$descripcion', '$profesor')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -247,7 +247,7 @@ function editar_grado()
     extract($_POST);
 
 
-    $consulta = "UPDATE grados SET descripcion = '$descripcion',duracion = '$duracion' WHERE id = '$id' ";
+    $consulta = "UPDATE grados SET descripcion = '$descripcion',profesor = '$profesor' WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {

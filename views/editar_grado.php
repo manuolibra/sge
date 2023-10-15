@@ -1,8 +1,8 @@
 <div class="modal fade" id="editar<?php echo $fila['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
-                <h3 class="modal-title" id="exampleModalLabel">Editar Grado</h3>
+            <div class="modal-header bg-dark text-white">
+                <h3 class="modal-title" id="exampleModalLabel">Editar Aula</h3>
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
                     <i class="fa fa-times" aria-hidden="true"></i></button>
             </div>
@@ -18,9 +18,33 @@
                     </div>
 
 
-                    <div class="form-group">
-                        <label for="nombre" class="form-label">Duracion</label>
-                        <input type="text" id="duracion" name="duracion" class="form-control" value="<?php echo $fila['duracion']; ?>" required>
+                    <div class="">
+                                <div class="mb-3 form-floating">
+                                    
+                                    <select name="profesor" id="profesor" class="form-control" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <?php
+
+                                        include("db.php");
+
+                                        $sql = 'SELECT * FROM profesores WHERE tipo_p = "Docente" ';
+                                        $resultado = mysqli_query($conexion, $sql);
+                                        while ($consulta = mysqli_fetch_array($resultado)) {
+                                            
+                                            if ($consulta['id'] === $fila['profesor']) {
+                                                echo '<option value="' . $consulta['id'] . '"selected>' . $consulta['nombres'] . " " . $consulta['apellidos'] . '</option>';
+                                            } else {
+                                                echo '<option value="' . $consulta['id'] . '">' . $consulta['nombres'] . " " . $consulta['apellidos'] . '</option>';
+                                            }
+
+
+                                           
+                                        }
+
+                                        ?>
+                                    </select>
+                                    <label for="profesor">Docente</label>
+                                </div>
                     </div>
 
 

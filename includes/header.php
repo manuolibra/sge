@@ -44,6 +44,10 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
         width: 75px;
         height: auto;
     }
+
+    .recargar {
+
+    }
 </style>
 
 <body id="page-top">
@@ -102,6 +106,13 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
+                <a class="nav-link active" href="../views/grados.php">
+                    <i class="bi bi-backpack-fill"></i>
+                    <span>Aulas</span>
+                </a>
+            </li>
+            
+           <!--  <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Otros</span>
@@ -113,14 +124,14 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                         <a class="collapse-item" href="../views/especialidades.php">Periodos académicos</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="../views/materias.php">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Asignaturas</span></a>
-            </li>
+            </li> -->
 
 
             <!-- Divider -->
@@ -218,7 +229,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                                 <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <div class="dropdown-menu shadow animated--grow-in dropdown-menu-end" aria-labelledby="userDropdown">
 
                                 <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>

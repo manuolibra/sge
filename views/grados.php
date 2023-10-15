@@ -9,7 +9,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Lista de Grados</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Lista de Aulas</h6>
                 
                 <?php if ($_SESSION["type"] != 3) { ?> <!-- Sólo el administrador -->
                     <br>
@@ -28,8 +28,8 @@
                             <tr>
                                 <th class='ver'>Acciones</th>
                                 <th class='ver'>Grado</th>
-                                <th>Duracion</th>
-                                <th>Fecha_registro</th>
+                                <th class='ver'>Alumnos</th>
+                                <th class='ver'>Docente</th>
                             </tr>
                         </thead>
 
@@ -57,9 +57,30 @@
                                         ?>
 
                                     </td>
+
                                     <td><?php echo $fila['descripcion']; ?></td>
-                                    <td><?php echo $fila['duracion']; ?></td>
-                                    <td><?php echo $fila['fecha']; ?></td>
+
+                                    <td><?php 
+                                    
+                                        include("db.php");
+                                        $sql = sprintf("SELECT COUNT(id) FROM alumnos WHERE id_grado = %u", $fila['id']);
+                                        $resultado = mysqli_query($conexion, $sql);
+                                        while ($consulta = mysqli_fetch_array($resultado)) {
+                                            echo $consulta[0];
+                                        }
+
+                                    ?></td>
+
+                                    <td><?php
+
+                                     include("db.php");
+                                     $sql = sprintf("SELECT * FROM profesores WHERE id = %u", $fila['profesor']);
+                                     $resultado = mysqli_query($conexion, $sql);
+                                     while ($consulta = mysqli_fetch_array($resultado)) {
+                                         echo $consulta['nombres'] . " " . $consulta['apellidos'];
+                                     }
+                                    
+                                    ?></td>
 
                                     
                                 </tr>
