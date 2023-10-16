@@ -27,15 +27,28 @@
                         <thead>
                             <tr>
                                 <th class='ver'>Acciones</th>
-                                <th class='ver'>Cedula</th>
-                                <th class='ver'>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Correo</th>
-                                <th>Nacionalidad</th>
-                                <th>Edad</th>
+                                <th class='ver'>Nombre completo</th>
+                                <th class='ver'>Cédula de Identidad</th>
                                 <th>Fecha de Nacimiento</th>
-                                <th class='ver'>Especialidad</th>
-                                <th>Fecha_Registro</th>    
+                                <th>Lugar de Nacimiento</th>
+                                <th>Edad</th>
+                                <th>Estado Civil</th>
+                                <th>Nacionalidad</th>
+                                <th>Correo</th>
+                                <th>Teléfono</th>
+                                <th>Dirección</th>
+                                <th>Nivel de Educación</th>
+                                <th>Mención Académica</th>
+                                <th>Postgrado</th>
+                                <th>Cursos</th>
+                                <th class="ver">Tiempo de Servicio</th>
+                                <th class="ver">Fecha de Ingreso</th>
+                                <th class="ver">Tipo de Personal</th>
+                                <th>Cargo</th>
+                                <th>Lugar donde cobra</th>
+                                <th>Lugar donde labora</th> 
+                                <th>Denominación de cargo</th>
+                                <th>Código</th>       
                             </tr>
                         </thead>
 
@@ -70,14 +83,27 @@
 
                                     </td>
                                     <td><?php echo $fila['cedula']; ?></td>
-                                    <td><?php echo $fila['nombres']; ?></td>
-                                    <td><?php echo $fila['apellidos']; ?></td>
-                                    <td><?php echo $fila['correo']; ?></td>
-                                    <td><?php echo $fila['curp']; ?></td>
-                                    <td><?php echo $fila['edad']; ?></td>
+                                    <td><?php echo $fila['nombres'] . " " . $fila['apellidos']; ?></td>
+                                    <td><?php echo $fila['cedula']; ?></td>
                                     <td><?php echo $fila['fecha_na']; ?></td>
-                                    <td><?php echo $fila['id_especialidad']; ?></td>
-                                    <td><?php echo $fila['fecha']; ?></td>
+                                    <td><?php echo $fila['lugar_na']; ?></td>
+                                    <td><?php echo $fila['edad']; ?></td>
+                                    <td><?php echo $fila['estado_civil']; ?></td>
+                                    <td><?php echo $fila['curp']; ?></td>
+                                    <td><?php echo $fila['correo']; ?></td>
+                                    <td><?php echo $fila['telefono']; ?></td>
+                                    <td><?php echo $fila['direccion']; ?></td>
+                                    <td><?php echo $fila['niv_edu']; ?></td>
+                                    <td><?php echo $fila['est_post']; ?></td>
+                                    <td><?php echo $fila['cursos']; ?></td>
+                                    <td><?php echo $fila['t_servicio']; ?></td>
+                                    <td><?php echo $fila['f_ingreso']; ?></td>
+                                    <td><?php echo $fila['tipo_p']; ?></td>
+                                    <td><?php echo $fila['cargo']; ?></td>
+                                    <td><?php echo $fila['l_cobra']; ?></td>
+                                    <td><?php echo $fila['l_labora']; ?></td>
+                                    <td><?php echo $fila['d_cargo']; ?></td>
+                                    <td><?php echo $fila['codigo']; ?></td>
                                 </tr>
                                 <?php include "ver_profesor.php"; ?>
                                 <?php include "editar_prof.php"; ?>

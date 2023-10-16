@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-10-2023 a las 00:27:22
+-- Tiempo de generación: 16-10-2023 a las 00:53:54
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -164,7 +164,7 @@ CREATE TABLE `profesores` (
   `curp` varchar(150) NOT NULL,
   `edad` varchar(50) NOT NULL,
   `fecha_na` date NOT NULL,
-  `id_especialidad` int(11) DEFAULT NULL,
+  `telefono` tinytext DEFAULT NULL,
   `lugar_na` varchar(150) NOT NULL,
   `estado_civil` varchar(150) NOT NULL,
   `direccion` varchar(200) NOT NULL,
@@ -187,9 +187,9 @@ CREATE TABLE `profesores` (
 -- Volcado de datos para la tabla `profesores`
 --
 
-INSERT INTO `profesores` (`id`, `cedula`, `nombres`, `apellidos`, `correo`, `curp`, `edad`, `fecha_na`, `id_especialidad`, `lugar_na`, `estado_civil`, `direccion`, `niv_edu`, `m_acad`, `est_post`, `cursos`, `t_servicio`, `f_ingreso`, `tipo_p`, `cargo`, `l_cobra`, `l_labora`, `d_cargo`, `codigo`, `fecha`) VALUES
-(4, '45645656', '546456456', '45345', '4564@gmail.com', '4533453', '453453', '2023-10-13', 0, '', '', '', '', '', '', '', '', '0000-00-00', '', '', '', '', '', '', '2023-10-09 23:56:04'),
-(5, '29790768', 'JOSE GABRIEL', 'VILLALOBOS', 'josegabovillalobos@gmail.com', 'VENEZOLANO', '21', '2002-03-05', 0, 'LOS CORTIJOS', 'SOLTERO', 'SAN FRANCSICO', 'PRIMARIA', 'PASJD', 'LCDS', 'CONTADURIA', '5 meses', '2020-01-31', 'OBRERO', 'BAMA', 'CONCEOCIO', 'ALA', 'PROFESOR', '636232378', '2023-10-12 18:46:11'),
+INSERT INTO `profesores` (`id`, `cedula`, `nombres`, `apellidos`, `correo`, `curp`, `edad`, `fecha_na`, `telefono`, `lugar_na`, `estado_civil`, `direccion`, `niv_edu`, `m_acad`, `est_post`, `cursos`, `t_servicio`, `f_ingreso`, `tipo_p`, `cargo`, `l_cobra`, `l_labora`, `d_cargo`, `codigo`, `fecha`) VALUES
+(4, '45645656', '546456456', '45345', '4564@gmail.com', '4533453', '453453', '2023-10-13', '0', '', '', '', '', '', '', '', '', '0000-00-00', '', '', '', '', '', '', '2023-10-09 23:56:04'),
+(5, '29790768', 'JOSE GABRIEL', 'VILLALOBOS', 'josegabovillalobos@gmail.com', 'VENEZOLANO', '21', '2002-03-05', '0', 'LOS CORTIJOS', 'SOLTERO', 'SAN FRANCSICO', 'PRIMARIA', 'PASJD', 'LCDS', 'CONTADURIA', '5 meses', '2020-01-31', 'OBRERO', 'BAMA', 'CONCEOCIO', 'ALA', 'PROFESOR', '636232378', '2023-10-12 18:46:11'),
 (6, '27104792', 'Manuel', 'Olivier', 'manuelolibra1205@gmail.com', '12345', '23', '2008-11-11', NULL, 'Maracaibo', 'Soltero', 'Manzanillo', 'TSU', '', '', '', '0', '2008-11-11', 'Docente', '', '', '', '', '120500', '2023-10-15 21:30:00'),
 (7, '5275', 'Manuel', 'Olivier', 'fssfs@hotmail.com', '454', '5', '2023-10-04', NULL, '4544545', 'Zulia', 'Barrio El Manzanillo, Av. 25-C', '4545', '4544', '4544', '45445', '454545', '2023-10-10', '4545', '454545', '4545', '454', '4545', '4004', '2023-10-12 21:39:08');
 

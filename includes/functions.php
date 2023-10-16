@@ -139,8 +139,8 @@ function insert_prof()
     extract($_POST);
     include "db.php";
 
-    $consulta = "INSERT INTO profesores (cedula, nombres, apellidos, correo, curp, edad, fecha_na, lugar_na, estado_civil, direccion, niv_edu, m_acad, est_post, cursos, t_servicio, f_ingreso, tipo_p, cargo, l_cobra, l_labora, d_cargo, codigo) 
-    VALUES ('$cedula', '$nombres','$apellidos','$correo','$curp','$edad','$fecha_na', '$lugar_na', '$estado_civil', '$direccion', '$niv_edu', '$m_acad', '$est_post', '$cursos', '$t_servicio', '$f_ingreso', '$tipo_p', '$cargo', '$l_cobra', '$l_labora', '$d_cargo', '$codigo')";
+    $consulta = "INSERT INTO profesores (cedula, nombres, apellidos, correo, curp, edad, fecha_na, lugar_na, estado_civil, direccion, niv_edu, m_acad, est_post, cursos, t_servicio, f_ingreso, tipo_p, cargo, l_cobra, l_labora, d_cargo, codigo, telefono) 
+    VALUES ('$cedula', '$nombres','$apellidos','$correo','$curp','$edad','$fecha_na', '$lugar_na', '$estado_civil', '$direccion', '$niv_edu', '$m_acad', '$est_post', '$cursos', '$t_servicio', '$f_ingreso', '$tipo_p', '$cargo', '$l_cobra', '$l_labora', '$d_cargo', '$codigo', '$telefono')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -164,8 +164,8 @@ function insert_alumno()
     extract($_POST);
     include "db.php";
 
-    $consulta = "INSERT INTO alumnos (nombre, apellido, cedula_escolar, sexo, nacionalidad, edad, lugar, birthdate, direccion, telefono, procede, tipo, nro_hermanos, est_hermanos, enfermedades, vacunas, vive, id_rep, rep, parentesco, rep_edad, rep_nacimiento, rep_lugar, rep_nacionalidad, estado_civil, profesion, inscripcion, id_grado, id_rep2, rep2, parentesco2, rep2_edad, rep2_nacimiento, rep2_lugar, rep2_nacionalidad, estado_civil2, profesion2) 
-    VALUES ('$nombre', '$apellido', '$cedula_escolar', '$sexo', '$nacionalidad', '$edad', '$lugar', '$birthdate', '$direccion', '$telefono', '$procede', '$tipo', '$nro_hermanos', '$est_hermanos', '$enfermedades', '$vacunas', '$vive', '$id_rep', '$rep', '$parentesco', '$rep_edad', '$rep_nacimiento', '$rep_lugar', '$rep_nacionalidad', '$estado_civil', '$profesion', '$inscripcion', '$id_grado', '$id_rep2', '$rep2', '$parentesco2', '$rep2_edad', '$rep2_nacimiento', '$rep2_lugar', '$rep2_nacionalidad', '$estado_civil2', '$profesion2')";
+    $consulta = "INSERT INTO alumnos (nombre, apellido, cedula_escolar, sexo, nacionalidad, edad, lugar, birthdate, direccion, telefono, procede, tipo, nro_hermanos, est_hermanos, enfermedades, vacunas, vive, id_rep, rep, parentesco, rep_edad, rep_nacimiento, rep_lugar, rep_nacionalidad, estado_civil, profesion, inscripcion, id_grado, id_rep2, rep2, parentesco2, rep2_edad, rep2_nacimiento, rep2_lugar, rep2_nacionalidad, estado_civil2, profesion2, telefono) 
+    VALUES ('$nombre', '$apellido', '$cedula_escolar', '$sexo', '$nacionalidad', '$edad', '$lugar', '$birthdate', '$direccion', '$telefono', '$procede', '$tipo', '$nro_hermanos', '$est_hermanos', '$enfermedades', '$vacunas', '$vive', '$id_rep', '$rep', '$parentesco', '$rep_edad', '$rep_nacimiento', '$rep_lugar', '$rep_nacionalidad', '$estado_civil', '$profesion', '$inscripcion', '$id_grado', '$id_rep2', '$rep2', '$parentesco2', '$rep2_edad', '$rep2_nacimiento', '$rep2_lugar', '$rep2_nacionalidad', '$estado_civil2', '$profesion2', '$telefono')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -192,7 +192,7 @@ function editar_profe()
 
 
     $consulta = "UPDATE profesores SET cedula = '$cedula', nombres = '$nombres', apellidos = '$apellidos', correo = '$correo',
-    curp = '$curp', edad='$edad', fecha_na = '$fecha_na', lugar_na = '$lugar_na', estado_civil = '$estado_civil', direccion = '$direccion', niv_edu = '$niv_edu', m_acad = '$m_acad', est_post = '$est_post', cursos = '$cursos', t_servicio = '$t_servicio', f_ingreso = '$f_ingreso', tipo_p = '$tipo_p', cargo = '$cargo', l_cobra = '$l_cobra', l_labora = '$l_labora', d_cargo = '$d_cargo', codigo = '$codigo' WHERE id = '$id' ";
+    curp = '$curp', edad='$edad', fecha_na = '$fecha_na', lugar_na = '$lugar_na', estado_civil = '$estado_civil', direccion = '$direccion', niv_edu = '$niv_edu', m_acad = '$m_acad', est_post = '$est_post', cursos = '$cursos', t_servicio = '$t_servicio', f_ingreso = '$f_ingreso', tipo_p = '$tipo_p', cargo = '$cargo', l_cobra = '$l_cobra', l_labora = '$l_labora', d_cargo = '$d_cargo', codigo = '$codigo', telefono = '$telefono' WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {

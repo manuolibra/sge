@@ -10,7 +10,6 @@
 
                 <form id="alumForm">
                     
-                <input type="file" class="form-control mb-3" name="imagen" id="imagen">
 
                 <div class="card mb-3">
                     <div class="card-header">
