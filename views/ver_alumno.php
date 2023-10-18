@@ -1,5 +1,5 @@
 <div class="modal fade" id="ver<?php echo $fila["id"]; ?>" tabindex="-1" role="dialog" aria-labelledby="userViewModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
+	<div class="modal-dialog modal-lg modal-dialog-scrollable">
 		<div class="modal-content">
 		<div class="modal-header bg-dark">
 			<h3 class="modal-title text-white fw-bold" id="exampleModalLabel"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $fila['nombre']; ?> <?php echo $fila['apellido']; ?></h3>
@@ -13,13 +13,13 @@
 					<div class="card mb-3">
 						<div class="card-body">
 							<div class="row text-center">
-								<div class="col-sm"><strong class="text-primary"><i class="bi bi-person-vcard"></i> Cédula Escolar:</strong> <br><p class="fs-5"><?php echo $fila['cedula_escolar']; ?></p> </div>
+								<div class="col-sm"><strong class="text-dark"><i class="bi bi-person-vcard"></i> Cédula Escolar:</strong> <br><p class="fs-5"><?php echo $fila['cedula_escolar']; ?></p> </div>
 								
-								<div class="col-sm"><strong class="text-primary"><i class="bi bi-gender-ambiguous"></i> Sexo:</strong> <br><p class="fs-5"> <?php echo $fila['sexo']; ?></p></div>
+								<div class="col-sm"><strong class="text-dark"><i class="bi bi-gender-ambiguous"></i> Sexo:</strong> <br><p class="fs-5"> <?php echo $fila['sexo']; ?></p></div>
 								
-								<div class="col-sm"><strong class="text-primary"><i class="bi bi-calendar"></i> Edad:</strong> <br><p class="fs-5"><?php echo $fila['edad']; ?></p></div>
+								<div class="col-sm"><strong class="text-dark"><i class="bi bi-calendar"></i> Edad:</strong> <br><p class="fs-5"><?php echo $fila['edad']; ?></p></div>
 								
-								<div class="col-sm"><strong class="text-primary"><i class="bi bi-backpack"></i> Aula:</strong> <br><p class="fs-5"> <?php
+								<div class="col-sm"><strong class="text-dark"><i class="bi bi-backpack"></i> Aula:</strong> <br><p class="fs-5"> <?php
                                             include("db.php");
 
                                             $sql = "SELECT * FROM grados ";
@@ -144,7 +144,10 @@
 		</form>
 		</div>
 		<div class="modal-footer bg-secondary-subtle">
-			<a class="btn btn-info" href="../includes/boletines/ejemplo.php?id=<?php echo $fila['id'] ?>">Generar Informe Final</a>
+			<?php if ($_SESSION["type"] != 3) { ?> <!-- Sólo el administrador y editor -->
+				<a class="btn btn-info" href="../includes/boletines/ejemplo.php?id=<?php echo $fila['id'] ?>">Generar Informe Final</a>
+                <?php }
+            ?> 
 			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
 		</div>
 	</div>
