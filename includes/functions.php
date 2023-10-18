@@ -164,8 +164,8 @@ function insert_alumno()
     extract($_POST);
     include "db.php";
 
-    $consulta = "INSERT INTO alumnos (nombre, apellido, cedula_escolar, sexo, nacionalidad, edad, lugar, birthdate, direccion, telefono, procede, tipo, nro_hermanos, est_hermanos, enfermedades, vacunas, vive, id_rep, rep, parentesco, rep_edad, rep_nacimiento, rep_lugar, rep_nacionalidad, estado_civil, profesion, inscripcion, id_grado, id_rep2, rep2, parentesco2, rep2_edad, rep2_nacimiento, rep2_lugar, rep2_nacionalidad, estado_civil2, profesion2, telefono) 
-    VALUES ('$nombre', '$apellido', '$cedula_escolar', '$sexo', '$nacionalidad', '$edad', '$lugar', '$birthdate', '$direccion', '$telefono', '$procede', '$tipo', '$nro_hermanos', '$est_hermanos', '$enfermedades', '$vacunas', '$vive', '$id_rep', '$rep', '$parentesco', '$rep_edad', '$rep_nacimiento', '$rep_lugar', '$rep_nacionalidad', '$estado_civil', '$profesion', '$inscripcion', '$id_grado', '$id_rep2', '$rep2', '$parentesco2', '$rep2_edad', '$rep2_nacimiento', '$rep2_lugar', '$rep2_nacionalidad', '$estado_civil2', '$profesion2', '$telefono')";
+    $consulta = "INSERT INTO alumnos (nombre, apellido, cedula_escolar, sexo, nacionalidad, edad, lugar, birthdate, direccion, telefono, procede, tipo, nro_hermanos, est_hermanos, enfermedades, vacunas, vive, id_rep, rep, parentesco, rep_edad, rep_nacimiento, rep_lugar, rep_nacionalidad, estado_civil, profesion, inscripcion, id_grado, id_rep2, rep2, parentesco2, rep2_edad, rep2_nacimiento, rep2_lugar, rep2_nacionalidad, estado_civil2, profesion2) 
+    VALUES ('$nombre', '$apellido', '$cedula_escolar', '$sexo', '$nacionalidad', '$edad', '$lugar', '$birthdate', '$direccion', '$telefono', '$procede', '$tipo', '$nro_hermanos', '$est_hermanos', '$enfermedades', '$vacunas', '$vive', '$id_rep', '$rep', '$parentesco', '$rep_edad', '$rep_nacimiento', '$rep_lugar', '$rep_nacionalidad', '$estado_civil', '$profesion', '$inscripcion', '$id_grado', '$id_rep2', '$rep2', '$parentesco2', '$rep2_edad', '$rep2_nacimiento', '$rep2_lugar', '$rep2_nacionalidad', '$estado_civil2', '$profesion2')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
