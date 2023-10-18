@@ -7,9 +7,9 @@
     <div class="container-fluid">
 
         <!-- DataTales Example -->
-        <div class="card shadow mb-4">
+        <div class="card shadow mb-4 border-bottom-danger">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Lista de Usuarios</h6>
+                <h6 class="m-0 font-weight-bold text-danger">Lista de Usuarios</h6>
                 <br>
 
                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#user">
@@ -40,7 +40,7 @@
                                 <tr> 
                                     <td>
                                         <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Acciones
                                             </button>
                                             <ul class="dropdown-menu">

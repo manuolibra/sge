@@ -7,7 +7,7 @@
     <div class="container-fluid">
 
         <!-- DataTales Example -->
-        <div class="card shadow mb-4">
+        <div class="card shadow mb-4 border-bottom-primary">
             <div class="card-header py-3" id="barra">
                 <h6 class="m-0 font-weight-bold text-primary">Personal del Plantel</h6>
                 
@@ -64,7 +64,7 @@
 
                                         <?php if ($_SESSION["type"] != 3) { ?> <!-- Sólo el administrador y editor -->
                                         <div class="dropdown">
-                                            <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Acciones
                                             </button>
                                             <ul class="dropdown-menu">

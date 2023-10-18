@@ -35,6 +35,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
 
     <script src="../js/jquery.min.js"></script>
     <link href="../vendor/datatables/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
     
 
 </head>

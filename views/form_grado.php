@@ -1,7 +1,7 @@
 <div class="modal fade" id="grado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-dark text-white">
+            <div class="modal-header bg-info text-white">
                 <h3 class="modal-title" id="exampleModalLabel">Agregar nueva aula</h3>
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
                     <i class="fa fa-times" aria-hidden="true"></i></button>

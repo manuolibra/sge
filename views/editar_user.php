@@ -1,10 +1,9 @@
 <div class="modal fade" id="editar<?php echo $fila['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
+            <div class="modal-header bg-danger text-white">
                 <h3 class="modal-title" id="exampleModalLabel">Editar Usuario</h3>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-                    <i class="fa fa-times" aria-hidden="true"></i></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
 
@@ -12,18 +11,20 @@
 
                     <div class="row">
                         <div class="col-sm-6">
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Usuario</label>
-                                <input type="text" id="usuario" name="usuario" class="form-control" value="<?php echo $fila['usuario']; ?>" required>
+                            <div class="mb-3 form-floating">
+                                
+                                <input type="text" id="usuario" name="usuario" class="form-control" value="<?php echo $fila['usuario']; ?>" placeholder="a" required>
+                                <label for="usuario" class="form-label">Usuario</label>
 
                             </div>
                         </div>
 
 
                         <div class="col-sm-6">
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Correo</label>
-                                <input type="email" id="correo" name="correo" class="form-control" value="<?php echo $fila['correo']; ?>" required>
+                            <div class="mb-3 form-floating">
+                                
+                                <input type="email" id="correo" name="correo" class="form-control" value="<?php echo $fila['correo']; ?>" placeholder="a"  required>
+                                <label for="correo" class="form-label">Correo</label>
                             </div>
                         </div>
                     </div>
@@ -47,14 +48,15 @@
 
 -->
 
-                    <div class="form-group">
-                        <label for="username">Tipo de Usuario</label><br>
+                    <div class="form-group form-floating">
+                        
                         <select name="id_rol" id="id_rol" class="form-control" required>
 
                             <option <?php echo $fila['id_rol'] === '1' ? "selected='selected' " : "" ?> value="1">Administrador</option>
                             <option <?php echo $fila['id_rol'] === '2' ? "selected='selected' " : "" ?> value="2">Editor</option>
                             <option <?php echo $fila['id_rol'] === '3' ? "selected='selected' " : "" ?> value="3">Lector</option>
                         </select>
+                        <label for="id_rol">Tipo de Usuario</label>
                     </div>
 
 

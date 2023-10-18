@@ -1,7 +1,7 @@
 <div class="modal fade" id="ver<?php echo $fila["id"]; ?>" tabindex="-1" role="dialog" aria-labelledby="userViewModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
-		<div class="modal-header">
+		<div class="modal-header bg-primary">
 			<h2 class="modal-title" id="exampleModalLabel"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $fila['nombres']; ?> <?php echo $fila['apellidos']; ?></h5>
 			<button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
 		</div>

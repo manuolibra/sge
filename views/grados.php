@@ -7,9 +7,9 @@
     <div class="container-fluid">
 
         <!-- DataTales Example -->
-        <div class="card shadow mb-4">
+        <div class="card shadow mb-4 border-bottom-info">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Lista de Aulas</h6>
+                <h6 class="m-0 font-weight-bold text-info">Lista de Aulas</h6>
                 
                 <?php if ($_SESSION["type"] != 3) { ?> <!-- Sólo el administrador -->
                     <br>
