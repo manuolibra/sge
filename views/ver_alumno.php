@@ -144,6 +144,7 @@
 		</form>
 		</div>
 		<div class="modal-footer bg-secondary-subtle">
+			<a class="btn btn-info" href="../includes/boletines/ejemplo.php?id=<?php echo $fila['id'] ?>">Generar Informe Final</a>
 			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
 		</div>
 	</div>
