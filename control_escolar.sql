@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-10-2023 a las 00:53:54
+-- Tiempo de generación: 18-10-2023 a las 05:06:11
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -57,7 +57,7 @@ CREATE TABLE `alumnos` (
   `profesion` varchar(100) NOT NULL,
   `inscripcion` date NOT NULL,
   `id_grado` int(11) NOT NULL,
-  `id_rep2` tinyint(4) DEFAULT NULL,
+  `id_rep2` varchar(100) DEFAULT NULL,
   `rep2` tinytext DEFAULT NULL,
   `parentesco2` tinytext DEFAULT NULL,
   `rep2_edad` tinyint(4) DEFAULT NULL,
@@ -67,18 +67,18 @@ CREATE TABLE `alumnos` (
   `estado_civil2` tinytext DEFAULT NULL,
   `profesion2` tinytext DEFAULT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `imagen` text NOT NULL
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `alumnos`
 --
 
-INSERT INTO `alumnos` (`id`, `nombre`, `apellido`, `cedula_escolar`, `sexo`, `nacionalidad`, `edad`, `lugar`, `birthdate`, `direccion`, `telefono`, `procede`, `tipo`, `nro_hermanos`, `est_hermanos`, `enfermedades`, `vacunas`, `vive`, `id_rep`, `rep`, `parentesco`, `rep_edad`, `rep_nacimiento`, `rep_lugar`, `rep_nacionalidad`, `estado_civil`, `profesion`, `inscripcion`, `id_grado`, `id_rep2`, `rep2`, `parentesco2`, `rep2_edad`, `rep2_nacimiento`, `rep2_lugar`, `rep2_nacionalidad`, `estado_civil2`, `profesion2`, `fecha`, `imagen`) VALUES
-(4, 'JOSE GABRIEL', 'VILLALOBOS VILLALOBOS', '29790768', 'M', 'VENEZOLANA', '21', 'San Francisco', '2002-03-05', 'Los Cortijos, Av. 49M, Casa 218A-33', '04127500805', 'UEE TERESA LOPEZ BUSTAMANTE', 'PÃšBLICO', '3', 'SÃ­', 'No', 'Todas', 'MADRE', '18317890', 'KEILA VILLALOBOS', 'Madre', '48', '1976-01-08', 'La Paz', 'Venezolana', 'Soltera', 'Chef', '2023-01-31', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-08 19:02:41', ''),
-(5, 'manuel', 'olivier', '4234234234', 'masculino', 'venezolano', '23', 'mm', '2023-10-12', '324', '234234', '2342', '2342', '23423', '23423', '24324', '234234', '234234', '23423', '234234', '234324', '23423', '2023-10-19', '23423', '234234', '234234', '234234', '2023-10-09', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-10-08 22:19:19', ''),
-(6, 'Manuel', 'Olivier', '54464', 'Masculino', 'venezolano', '23', '456456456', '2023-10-15', 'Barrio El Manzanillo, Av. 25-C', '04120746710', '46456456456', 'Público', '0', 'No', '464564', '45645645', '544654', '464564', '46456', '464564', '456', '0666-07-13', '4646545', '456456', 'Soltero', '46456464', '2023-10-09', 2, 127, '55453453', '4534534', 127, '2023-10-13', '4646545', '464646', 'Soltero', '4564646', '2023-10-10 21:53:55', ''),
-(7, 'fsfs', 'sfsass', '1231313', 'Masculino', 'weqwe', '12', 'eqweqwe', '2023-10-12', '4534534', '524553', '46456456456', 'Público', '55', 'Sí', '4534534', '34534534', '534534', '453453645', '43453453', '345345345345', '45', '2023-10-18', '56644564', '456456456', 'Soltero', '64564664', '2023-10-18', 1, 127, '6456456', '4564564', 127, '2023-10-11', '4566456', '644564', 'Casado', '456456456', '2023-10-15 21:21:57', '');
+INSERT INTO `alumnos` (`id`, `nombre`, `apellido`, `cedula_escolar`, `sexo`, `nacionalidad`, `edad`, `lugar`, `birthdate`, `direccion`, `telefono`, `procede`, `tipo`, `nro_hermanos`, `est_hermanos`, `enfermedades`, `vacunas`, `vive`, `id_rep`, `rep`, `parentesco`, `rep_edad`, `rep_nacimiento`, `rep_lugar`, `rep_nacionalidad`, `estado_civil`, `profesion`, `inscripcion`, `id_grado`, `id_rep2`, `rep2`, `parentesco2`, `rep2_edad`, `rep2_nacimiento`, `rep2_lugar`, `rep2_nacionalidad`, `estado_civil2`, `profesion2`, `fecha`, `image`) VALUES
+(5, 'manuel', 'olivier', '4234234234', 'Masculino', 'venezolano', '23', 'mm', '2023-10-12', '324', '234234', '2342', 'Público', '23423', 'Sí', '24324', '234234', '234234', '23423', '234234', '234324', '23423', '2023-10-19', '23423', '234234', 'Soltero', '234234', '2023-10-09', 1, '127', '257272', '78878', 55, '2023-10-16', '23423', '782782', 'Soltero', '78278278', '2023-10-18 01:54:48', ''),
+(6, 'Manuel', 'Olivier', '54464', 'Masculino', 'venezolano', '23', '456456456', '2023-10-15', 'Barrio El Manzanillo, Av. 25-C', '04120746710', '46456456456', 'Público', '0', 'No', '464564', '45645645', '544654', '464564', '46456', '464564', '456', '0666-07-13', '4646545', '456456', 'Soltero', '46456464', '2023-10-09', 2, '127', '55453453', '4534534', 127, '2023-10-13', '4646545', '464646', 'Soltero', '4564646', '2023-10-10 21:53:55', ''),
+(7, 'fsfs', 'sfsass', '1231313', 'Masculino', 'weqwe', '12', 'eqweqwe', '2023-10-12', '4534534', '524553', '46456456456', 'Público', '55', 'Sí', '4534534', '34534534', '534534', '453453645', '43453453', '345345345345', '45', '2023-10-18', '56644564', '456456456', 'Soltero', '64564664', '2023-10-18', 1, '127', '6456456', '4564564', 127, '2023-10-11', '56644564', '644564', 'Soltero', '456456456', '2023-10-18 01:45:38', ''),
+(8, 'Manuel Alejando', 'Olivier Bravo', '27104792', 'Masculino', 'Venezolana', '23', 'Maracaibo, Estado Zulia', '2000-05-12', 'Barrio El Manzanillo, Av. 25-C', '04120746710', 'Ninguno', 'Público', '0', 'No', 'Alergias', 'Todas', 'Mamá y Abuelos', '12590011', 'Wilmary Josefina Olivier Bravo', 'Madre', '49', '1974-10-29', 'Maracaibo, Estado Zulia', 'Venezolana', 'Soltero', 'Maestra', '2023-10-17', 1, '127', 'Ana María Bravo Socorro', 'Abuela', 64, '1947-10-08', 'Maracaibo, Estado Zulia', 'Venezolana', 'Soltero', 'Maestra', '2023-10-18 03:03:25', '');
 
 -- --------------------------------------------------------
 
@@ -188,7 +188,7 @@ CREATE TABLE `profesores` (
 --
 
 INSERT INTO `profesores` (`id`, `cedula`, `nombres`, `apellidos`, `correo`, `curp`, `edad`, `fecha_na`, `telefono`, `lugar_na`, `estado_civil`, `direccion`, `niv_edu`, `m_acad`, `est_post`, `cursos`, `t_servicio`, `f_ingreso`, `tipo_p`, `cargo`, `l_cobra`, `l_labora`, `d_cargo`, `codigo`, `fecha`) VALUES
-(4, '45645656', '546456456', '45345', '4564@gmail.com', '4533453', '453453', '2023-10-13', '0', '', '', '', '', '', '', '', '', '0000-00-00', '', '', '', '', '', '', '2023-10-09 23:56:04'),
+(4, '45645656', '546456456', '45345', '4564@gmail.com', '4533453', '453453', '0000-00-00', '0', '', 'Soltero', '', 'Licenciado', '', '', '', '', '0000-00-00', 'Administrativo', '', '', '', '', '', '2023-10-16 00:11:40'),
 (5, '29790768', 'JOSE GABRIEL', 'VILLALOBOS', 'josegabovillalobos@gmail.com', 'VENEZOLANO', '21', '2002-03-05', '0', 'LOS CORTIJOS', 'SOLTERO', 'SAN FRANCSICO', 'PRIMARIA', 'PASJD', 'LCDS', 'CONTADURIA', '5 meses', '2020-01-31', 'OBRERO', 'BAMA', 'CONCEOCIO', 'ALA', 'PROFESOR', '636232378', '2023-10-12 18:46:11'),
 (6, '27104792', 'Manuel', 'Olivier', 'manuelolibra1205@gmail.com', '12345', '23', '2008-11-11', NULL, 'Maracaibo', 'Soltero', 'Manzanillo', 'TSU', '', '', '', '0', '2008-11-11', 'Docente', '', '', '', '', '120500', '2023-10-15 21:30:00'),
 (7, '5275', 'Manuel', 'Olivier', 'fssfs@hotmail.com', '454', '5', '2023-10-04', NULL, '4544545', 'Zulia', 'Barrio El Manzanillo, Av. 25-C', '4545', '4544', '4544', '45445', '454545', '2023-10-10', '4545', '454545', '4545', '454', '4545', '4004', '2023-10-12 21:39:08');
@@ -272,7 +272,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `especialidades`
