@@ -5,45 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SISTEMA DE CONTROL ESCOLAR | SOFTCODEPM</title>
-
+    <title>SISTEMA DE GESTIÓN ESCOLAR | UEE 19 DE ABRIL</title>
+    <link rel="stylesheet" href="../vendor/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/style.css">
+    
 
 </head>
 
-<body>
+<body class="login">
     <div class="container">
         <div id="login"></div>
         <div class="row justify-content-center align-items-center min-vh-100">
-            <div id="login-box" class="col-12 col-md-8 col-lg-6">
-                <h2 class="text-center">SISTEMA DE CONTROL ESCOLAR</h2>
-                <center><img src="../../img/tec.png" alt="" width="150px" class=""></center>
-                <br>
-                <p class="text-center">Ingrese su usuario y contraseña para iniciar sesión</p>
-
-
-                <div id="alert">
+            <div id="login-box shadow" class="card col-6 p-4">
+                <div class="row text-center m-4">
+                    <h3 class="text-secondary">SISTEMA DE GESTIÓN ESCOLAR</h3>
+                    <h1 class="text-primary">UEE 19 DE ABRIL</h1>  
                 </div>
-                <form class="row g-3 needs-validation" novalidate id="loginForm" name="loginData">
+                <div class="row">
+                    <div class="col">
+                        
+                        <form class="row needs-validation" novalidate id="loginForm" name="loginData">
+                            <div class="col g-2">
+                                <div id="alert"></div>
+                                <p class="text-center text-secondary">Ingrese su usuario y contraseña para iniciar sesión</p>
+                                
+
+                                    <div class="form-floating mb-3">
+                                        
+                                        <input type="text" id="usuario" name="usuario" class="form-control" placeholder="aa" required>
+                                        <label for="usuario">Usuario</label>
+                                    </div>
+
+                                   <div class="form-floating mb-3 ">
+                                    
+                                        <input type="password" id="password" name="password" class="form-control" placeholder="aa" required>
+                                        <label for="password">Contraseña</label>
+                                    </div> 
 
 
-                    <div class="form-group">
-                        <label for="usuario" class="form-label">Usuario</label>
-                        <input type="text" id="usuario" name="usuario" class="form-control" required>
+                                
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-success">Acceder</button>
+                                </div>
+                            </div>
+                            
+                        </form>
                     </div>
-
-                    <div class="form-group">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" id="password" name="password" class="form-control" required>
-                    </div>
-
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Acceder</button>
-                    </div>
-                </form>
-                <br>
-
+                    
+                
+                </div>
 
             </div>
         </div>

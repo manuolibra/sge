@@ -11,7 +11,7 @@
         <div class="modal-dialog  modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">¿Estás seguro de cerrar sesión?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">¿Estás seguro de querer cerrar sesión?</h5>
                     <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>

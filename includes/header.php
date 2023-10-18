@@ -23,7 +23,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SISTEMA DE GESTIÓN ESCOLAR</title>
+    <title>SISTEMA DE GESTIÓN ESCOLAR | UEE 19 DE ABRIL</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
