@@ -153,8 +153,9 @@
                                     <td><?php echo $fila['profesion2']; ?></td>
                                     <td><?php echo $fila['fecha']; ?></td>
                                 </tr>
-                                <?php include "ver_alumno.php"; ?>
                                 <?php include "editar_alumno.php"; ?>
+                                <?php include "ver_alumno.php"; ?>
+                                
                             <?php endwhile; ?>
                         </tbody>
                     </table>
