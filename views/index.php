@@ -2,12 +2,12 @@
 include "../includes/header.php";
 ?>
 <!-- Begin Page Content -->
-<div class="banner shadow"></div>
+<div class="banner shadow-lg border-top border-bottom border-light"></div>
 <div class="container mt-3">
 
     <!-- Page Heading -->
     <div class="mb-4">
-        <h1 class="text-center">Panel Principal</h1>
+        <h1 class="text-center text-white">Panel Principal</h1>
     </div>
 
     <!-- Content Row -->

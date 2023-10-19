@@ -58,14 +58,12 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
 
         <!-- Sidebar -->
         <ul class="navbar-nav bg-black bg-gradient sidebar sidebar-dark accordion" id="accordionSidebar">
-
+            <li class="nav-item m-3">
+                <a href="index.php">
+                    <img src="../img/logo.jpg" class="img-fluid img-thumbnail" alt="logo del plantel">
+                </a>
+            </li>
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-
-                <div class=" sidebar-brand-text mx-2">GESTIÓN ESCOLAR </br> UEE 19 DE ABRIL <sup></sup>
-                </div>
-
-            </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">

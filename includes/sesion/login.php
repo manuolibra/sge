@@ -17,10 +17,12 @@
     <div class="container">
         <div id="login"></div>
         <div class="row justify-content-center align-items-center min-vh-100">
-            <div id="login-box shadow" class="card col-6 p-4">
-                <div class="row text-center m-4">
-                    <h3 class="text-secondary">SISTEMA DE GESTIÓN ESCOLAR</h3>
-                    <h1 class="text-primary">UEE 19 DE ABRIL</h1>  
+            <div id="login-box shadow-lg" class="card col-6 p-4">
+                <div class="row text-center m-4 ">
+                    <div class="col-sm"></div>
+                    <div class="col-sm"><img src="../../img/logo.jpg" class="img-fluid" alt="logo de la institución"></div>
+                    
+                    <div class="col-sm"></div>
                 </div>
                 <div class="row">
                     <div class="col">
