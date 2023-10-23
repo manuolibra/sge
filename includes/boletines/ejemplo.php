@@ -11,15 +11,21 @@
     $TBS = new clsTinyButStrong; 
     $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); 
     //Parametros
-    $nomprofesor = $fila['nombre'];
-    $fechaprofesor = $fila['cedula_escolar'];
+    $apellido = $fila['apellido'];
+    $nombre = $fila['nombre'];
+    $cedula = $fila['cedula_escolar'];
+    $grado = $fila['id_grado'];
+    $rep = $fila['rep'];
     
     //Cargando template
     $template = 'Plantilla_Colegiado.docx';
     $TBS->LoadTemplate($template, OPENTBS_ALREADY_UTF8);
     //Escribir Nuevos campos
-    $TBS->MergeField('pro.nomprofesor', $nomprofesor);
-    $TBS->MergeField('pro.fechaprofesor', $fechaprofesor);
+    $TBS->MergeField('apellidos', $apellido);
+    $TBS->MergeField('nombres', $nombre);
+    $TBS->MergeField('c.escolar', $cedula);
+    $TBS->MergeField('grado', $grado);
+    $TBS->MergeField('rep', $rep);
 
     $TBS->PlugIn(OPENTBS_DELETE_COMMENTS);
 
