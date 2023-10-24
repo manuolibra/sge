@@ -12,6 +12,36 @@
     $resultado = mysqli_query($conexion, $sql);
     $cgrado = mysqli_fetch_array($resultado);
     
+    function aEscolar() {
+        $añoActual = date("Y");
+        $mesActual = idate("m");
+
+        if ($mesActual <= 7) {
+            return date("Y",strtotime("-1 year")) . "-" . $añoActual;
+        } elseif ($mesActual >= 9) {
+            return $añoActual . "-" . date("Y",strtotime("+1 year"));
+        } else {
+            return "Vacaciones";
+        };
+        
+    };
+
+    function lapsoActual() {
+        $mesActual = idate("m");
+
+        switch ($mesActual) {
+            case '9' || '10' || '11' || '12':
+                return "Primer Lapso";
+                break;
+
+            case '1' || '2' || '3':
+                return "Segundo Lapso";
+                break;
+            default:
+                return "Tercer Lapso";
+                break;
+        }
+    }
 
     $TBS = new clsTinyButStrong; 
     $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); 
@@ -21,6 +51,9 @@
     $cedula = $fila['cedula_escolar'];
     $grado = $cgrado['descripcion'];
     $rep = $fila['rep'];
+    $ano = aEscolar();
+    $fecha = date("d-m-Y");
+    $lapso = lapsoActual(); 
     
     //Cargando template
     $template = 'Plantilla_Colegiado.docx';
@@ -31,6 +64,9 @@
     $TBS->MergeField('c.escolar', $cedula);
     $TBS->MergeField('grado', $grado);
     $TBS->MergeField('rep', $rep);
+    $TBS->MergeField('aEscolar', $ano);
+    $TBS->MergeField('fecha', $fecha);
+    $TBS->MergeField('lapso', $lapso);
 
     $TBS->PlugIn(OPENTBS_DELETE_COMMENTS);
 
