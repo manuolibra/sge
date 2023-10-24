@@ -25,6 +25,8 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
 
     <title>SISTEMA DE GESTIÓN ESCOLAR | UEE 19 DE ABRIL</title>
 
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../package/dist/sweetalert2.css">
