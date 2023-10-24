@@ -8,13 +8,18 @@
     $result = mysqli_query($conexion, $consulta);
     $fila = mysqli_fetch_assoc($result);
 
+    $sql = sprintf("SELECT * FROM grados WHERE id = %u", $fila['id_grado']);
+    $resultado = mysqli_query($conexion, $sql);
+    $cgrado = mysqli_fetch_array($resultado);
+    
+
     $TBS = new clsTinyButStrong; 
     $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); 
     //Parametros
     $apellido = $fila['apellido'];
     $nombre = $fila['nombre'];
     $cedula = $fila['cedula_escolar'];
-    $grado = $fila['id_grado'];
+    $grado = $cgrado['descripcion'];
     $rep = $fila['rep'];
     
     //Cargando template
