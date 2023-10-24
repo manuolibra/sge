@@ -178,9 +178,38 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
+                    <div class="d-flex flex-column mb-0 justify-content-start align-items-baseline">
 
+                    
+                    <h4 class="navbar-text p-0 m-0 text-light"> Año Escolar: <strong class="ms-2"> <?php
+                                    $añoActual = date("Y");
+                                    $mesActual = idate("m");
+                            
+                                    if ($mesActual <= 7) {
+                                        echo date("Y",strtotime("-1 year")) . " - " . $añoActual;
+                                    } else {
+                                        echo $añoActual . " - " . date("Y",strtotime("+1 year"));
+                                    }
 
+                        ?></strong></h4>
 
+                        <p class="navbar-text p-0 m-0 text-black fw-bold"><?php
+                                   $mesActual = idate("m");
+
+                                   switch ($mesActual) {
+                                       case '9' || '10' || '11' || '12':
+                                           echo "Primer Lapso";
+                                           break;
+                           
+                                       case '1' || '2' || '3':
+                                           echo "Segundo Lapso";
+                                           break;
+                                       default:
+                                           echo "Tercer Lapso";
+                                           break;
+                                   }
+                        ?></p>
+                    </div>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -216,6 +245,9 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                             }
                         }
                         ?>
+
+                        
+
                         <button style = "color:white;" type="button" class="btn btn-link-white bi bi-arrow-clockwise" onclick="document.location.reload();"></button>
                         <div class="topbar-divider d-none d-sm-block"></div>
                         
