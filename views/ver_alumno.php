@@ -144,9 +144,16 @@
 		</form>
 		</div>
 		<div class="modal-footer bg-secondary-subtle">
-			<?php if ($_SESSION["type"] != 3) { ?> <!-- Sólo el administrador y editor -->
-				<a class="btn btn-info" href="../includes/boletines/ejemplo.php?id=<?php echo $fila['id'] ?>">Generar Informe Final</a>
-                <?php }
+		<?php if ($_SESSION["type"] != 3) { ?><div class="dropdown">
+    <button class="btn btn-info btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Generar Informe Final
+           </button>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <a class="dropdown-item" href="../includes/boletines/ejemplo.php?id=<?php echo $fila['id'] ?>">Formato de Inicial</a>
+           <a class="dropdown-item" href="#">Formato de Primaria</a>
+           </div>
+          </div>
+		  <?php }
             ?> 
 			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
 		</div>
