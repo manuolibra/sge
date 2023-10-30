@@ -149,8 +149,8 @@
             Generar Informe Final
            </button>
            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-           <a class="dropdown-item" href="#">Formato de Inicial</a>
-           <a class="dropdown-item" href="../includes/boletines/ejemplo.php?id=<?php echo $fila['id'] ?>">Formato de Primaria</a>
+           <a class="dropdown-item" href="../includes/boletines/inicial.php?id=<?php echo $fila['id'] ?>">Formato de Inicial</a>
+           <a class="dropdown-item" href="../includes/boletines/primaria.php?id=<?php echo $fila['id'] ?>">Formato de Primaria</a>
            </div>
           </div>
 		  <?php }

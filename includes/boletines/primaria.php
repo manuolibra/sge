@@ -56,7 +56,7 @@
     $lapso = lapsoActual(); 
     
     //Cargando template
-    $template = 'Plantilla_Colegiado.docx';
+    $template = 'primaria.docx';
     $TBS->LoadTemplate($template, OPENTBS_ALREADY_UTF8);
     //Escribir Nuevos campos
     $TBS->MergeField('apellidos', $apellido);
