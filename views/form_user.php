@@ -107,8 +107,8 @@
     function confirmation(r) {
         if (r === 'success') {
             Swal.fire({
-                'title': '¡Éxito!',
-                'text': 'Usuario Registrado',
+                'title': 'Usuario Registrado',
+                'text': 'Los datos se guardaron correctamente',
                 'icon': 'success',
                 'showConfirmButton': 'false',
                 'timer': '1500'

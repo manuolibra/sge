@@ -477,16 +477,29 @@ $consulta = mysqli_fetch_array($resultado)
             dataType: "json",
             success: function(response) {
                 if (response === "correcto") {
-                    alert("El registro se ha actualizado correctamente");
-                    setTimeout(function() {
+                    Swal.fire({
+                        'title': 'Alumno actualizado',
+                        'text': 'Los datos se guardaron correctamente',
+                        'icon': 'success',
+                        'showConfirmButton': 'false',
+                        'timer': '1500'
+                    }).then(function() {
                         location.assign('alumnos.php');
-                    }, 2000);
+                    });
                 } else {
-                    alert("Ha ocurrido un error al actualizar el registro");
+                    Swal.fire({
+                        'title': 'Error',
+                        'text': 'No se pudieron actualizar los datos',
+                        'icon': 'error'
+                    })
                 }
             },
             error: function() {
-                alert("Error de comunicacion con el servidor");
+                Swal.fire({
+                'title': 'Error',
+                'text': 'Error de comunicación con el servidor',
+                'icon': 'error'
+            })
             }
         });
     }

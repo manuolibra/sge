@@ -292,16 +292,30 @@
                 data: formData,
                 dataType: 'json',
                 success: function(response) {
-                    if (response.status === 'success') {
-                        alert('Éxito: Los datos se guardaron correctamente');
-                        window.location = "profesores.php";
+                    if (response === "correcto") {
+                        Swal.fire({
+                            'title': 'Personal Registrado',
+                            'text': 'Los datos se guardaron correctamente',
+                            'icon': 'success',
+                            'showConfirmButton': 'false',
+                            'timer': '1500'
+                        }).then(function() {
+                            location.assign('profesores.php');
+                        });
                     } else {
-                        alert('Error: Ocurrió un error inesperado');
+                        Swal.fire({
+                            'title': 'Error',
+                            'text': 'No se pudieron agregar los datos',
+                            'icon': 'error'
+                        })
                     }
                 },
-                error: function(xhr, status, error) {
-                    alert('Error: Ocurrió un error inesperado');
-                    console.log({error})
+                error: function() {
+                    Swal.fire({
+                    'title': 'Error',
+                    'text': 'Error de comunicación con el servidor',
+                    'icon': 'error'
+                })
                 }
             });
         });
