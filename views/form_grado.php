@@ -64,7 +64,7 @@
                 data: formData,
                 dataType: 'json',
                 success: function(response) {
-                    if (response === "correcto") {
+                    if (response.status === 'success') {
                         Swal.fire({
                             'title': 'Aula Registrada',
                             'text': 'Los datos se guardaron correctamente',
