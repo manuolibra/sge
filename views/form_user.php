@@ -107,7 +107,7 @@
     function confirmation(r) {
         if (r === 'success') {
             Swal.fire({
-                'title': '¡Mensaje!',
+                'title': '¡Éxito!',
                 'text': 'Usuario Registrado',
                 'icon': 'success',
                 'showConfirmButton': 'false',
@@ -119,14 +119,14 @@
         if (r === 'error') {
             Swal.fire({
                 'title': 'Error',
-                'text': 'No se creo el usuario',
+                'text': 'No se creó el usuario',
                 'icon': 'error'
             })
         }
         if (r === 'mail') {
             Swal.fire({
                 'title': 'Error',
-                'text': 'Este usuario ya esta registrado prueba con otro o inicia sesión',
+                'text': 'Este usuario ya esta registrado. Prueba con otro o inicia sesión',
                 'icon': 'error'
             })
         }
