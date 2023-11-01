@@ -86,7 +86,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ver<?php echo $fila['id']; ?>" href="#">Ver</a></li>
                                                 <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editar<?php echo $fila['id']; ?>" href="#">Editar</a></li>
-                                                <li><a class="dropdown-item" href="../includes/eliminar_al.php?id=<?php echo $fila['id'] ?>">Eliminar</a></li>
+                                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#eliminar<?php echo $fila['id']; ?>" href="#">Eliminar</a></li>
                                             </ul>
                                         </div>
                                         <?php }
@@ -153,8 +153,10 @@
                                     <td><?php echo $fila['profesion2']; ?></td>
                                     <td><?php echo $fila['fecha']; ?></td>
                                 </tr>
+                                <?php include "borrar_alumno.php"; ?>
                                 <?php include "editar_alumno.php"; ?>
-                                <?php include "ver_alumno.php"; ?>
+                                <?php include "ver_alumno.php"; ?> 
+                                
                                 
                             <?php endwhile; ?>
                         </tbody>

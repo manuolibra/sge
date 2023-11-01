@@ -27,8 +27,8 @@
                         <thead>
                             <tr>
                                 <th class='ver'>Acciones</th>
-                                <th class='ver'>Nombre completo</th>
                                 <th class='ver'>Cédula de Identidad</th>
+                                <th class='ver'>Nombre completo</th>
                                 <th>Fecha de Nacimiento</th>
                                 <th>Lugar de Nacimiento</th>
                                 <th>Edad</th>
@@ -70,7 +70,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ver<?php echo $fila['id']; ?>" href="#">Ver</a></li>
                                                 <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editar<?php echo $fila['id']; ?>" href="#">Editar</a></li>
-                                                <li><a class="dropdown-item" href="../includes/eliminar_prof.php?id=<?php echo $fila['id'] ?>">Eliminar</a></li>
+                                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#eliminar<?php echo $fila['id']; ?>" href="#">Eliminar</a></li>
                                             </ul>
                                         </div>
                                         <?php }
@@ -105,6 +105,7 @@
                                     <td><?php echo $fila['d_cargo']; ?></td>
                                     <td><?php echo $fila['codigo']; ?></td>
                                 </tr>
+                                <?php include "borrar_prof.php"; ?>
                                 <?php include "ver_profesor.php"; ?>
                                 <?php include "editar_prof.php"; ?>
                             <?php endwhile; ?>

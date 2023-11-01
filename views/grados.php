@@ -50,7 +50,7 @@
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editar<?php echo $fila['id']; ?>" href="#">Editar</a></li>
-                                                <li><a class="dropdown-item" href="../includes/eliminar_grad.php?id=<?php echo $fila['id'] ?>">Eliminar</a></li>
+                                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#eliminar<?php echo $fila['id']; ?>" href="#">Eliminar</a></li>
                                             </ul>
                                         </div>
                                         <?php }
@@ -84,6 +84,7 @@
 
                                     
                                 </tr>
+                                <?php include "borrar_grado.php"; ?>
                                 <?php include "editar_grado.php"; ?>
                             <?php endwhile; ?>
                         </tbody>
