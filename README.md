@@ -17,7 +17,7 @@ Git: es un software de control de versiones, diseñado pensando en la eficiencia
 fuente. 
 
 Visual Studio Code: es un editor de código fuente desarrollado por Microsoft para Windows, Linux, macOS y Web, construido sobre el framework Electron.  
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 VERSIONES
 
 Versión Inicial 0.1 - 23/06/2023
