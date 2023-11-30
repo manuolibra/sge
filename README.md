@@ -1,6 +1,6 @@
 # PROGRAMA DE GESTION ESCOLAR V1.0
 Este programa fue creado con la finalidad de ayudar a aquellas instituciones sin recursos o conocimientos para pagar este tipo de programas que ayudaría de gran forma los procesos y registros de información relativa a la institución y sus alumnos.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 COMPOSICION
 
 Hypertext PreProcessor: lenguaje de código abierto muy popular especialmente adecuado para el desarrollo de aplicaciones web y que puede ser incrustado en HTML. 
@@ -17,5 +17,42 @@ Git: es un software de control de versiones, diseñado pensando en la eficiencia
 fuente. 
 
 Visual Studio Code: es un editor de código fuente desarrollado por Microsoft para Windows, Linux, macOS y Web, construido sobre el framework Electron.  
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-FUNCIONES
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+VERSIONES
+
+Versión Inicial 0.1 - 23/06/2023
+-Base de Datos (Estudiantes)
+-Módulo de registro de estudiantes
+-CRUD estudiantes
+
+0.3 - 09/08/2023
+-Módulo de grados y secciones
+-Sistema de grados y secciones
+
+0.5 - 17/08/2023
+-Base de datos (Personal)
+-Módulo de registro del personal
+-CRUD personal
+
+0.8 - 23/08/2023
+-Módulo de automatización de boletiines
+-Módulo de exportación de datos
+
+Versión Intermedia 1.0 - 15/09/2023
+-Sistema de Inicio de Sesión
+-Módulo de usuarios
+-Sistema de roles (administrador, editor y lector)
+
+1.3 29/09/2023
+-Cambios en el apartado visual
+-Correción de errores
+
+1.5 05/10/2023
+-Actualización de formularios
+
+1.8 10/10/2023
+-Actualización del Módulo de Boletines
+
+Versión Final 2.0 16/10/2023
+-Correción de errores
+-Cambios en el apartado visual
